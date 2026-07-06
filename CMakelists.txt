@@ -8,6 +8,7 @@ include_directories(include)
 
 add_executable(DRBG
     src/main.c
+    src/benchmark.c
     src/timer.c
     src/logger.c
     src/utils.c

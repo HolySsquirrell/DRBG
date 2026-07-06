@@ -1,22 +1,21 @@
-#include "logger.h"
-#include "timer.h"
-#include "utils.h"
+#include "benchmark.h"
 
 int main(void)
 {
-    Timer timer;
-
-    timer_start(&timer);
-
-    for (volatile int i = 0; i < 100000000; ++i)
+    BenchmarkConfig config =
     {
-        /* Busy wait */
-    }
+        .output_size = 1024 * 1024,
+        .reseed_interval = 0,
+        .save_output = 0,
+        .repetitions = 1
+    };
 
-    timer_stop(&timer);
+    BenchmarkResult result;
 
-    log_success("Timer test completed.");
-    log_info("Elapsed time: %.3f ms", timer_elapsed_milliseconds(&timer));
+    benchmark_run(
+        NULL,
+        &config,
+        &result);
 
     return 0;
 }
