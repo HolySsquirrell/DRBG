@@ -1,4 +1,5 @@
 #include "benchmark.h"
+#include "dummy.h"
 
 int main(void)
 {
@@ -13,7 +14,7 @@ int main(void)
     BenchmarkResult result;
 
     benchmark_run(
-        NULL,
+        &DummyDRBG,
         &config,
         &result);
 

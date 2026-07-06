@@ -2,7 +2,7 @@
 #define BENCHMARK_H
 
 #include <stddef.h>
-
+#include "drbg.h"
 struct DRBG;
 
 typedef struct
@@ -26,7 +26,7 @@ typedef struct
 } BenchmarkResult;
 
 int benchmark_run(
-    const struct DRBG *drbg,
+    const DRBG *drbg,
     const BenchmarkConfig *config,
     BenchmarkResult *result);
 
