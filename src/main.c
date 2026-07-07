@@ -1,6 +1,9 @@
 #include "benchmark.h"
 #include "dummy.h"
 #include "utils.h"
+#include "config.h"
+#include "csv.h"
+
 int main(void)
 {
     BenchmarkConfig config =
@@ -12,7 +15,7 @@ int main(void)
     };
 
     BenchmarkResult result;
-
+    csv_write_header(RESULTS_CSV_FILE);
     benchmark_run(
         &DummyDRBG,
         &config,

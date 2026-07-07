@@ -5,7 +5,8 @@
 #include "status.h"
 #include "timer.h"
 #include "utils.h"
-
+#include "config.h"
+#include "csv.h"
 #include <stdlib.h>
 #include <string.h>
 
@@ -94,6 +95,17 @@ DRBGStatus benchmark_run(
             goto cleanup;
         }
 
+        status = drbg->verify(
+            ctx,
+            buffer,
+            config->output_size);
+
+        if (status != DRBG_STATUS_SUCCESS)
+        {
+            log_error("Output verification failed.");
+            goto cleanup;
+        }
+
         double elapsed =
             timer_elapsed_milliseconds(&timer);
 
@@ -177,7 +189,15 @@ DRBGStatus benchmark_run(
              result->throughput_MBps);
 
     log_info("========================================");
-
+    
+    if (!csv_append_result(
+        RESULTS_CSV_FILE,
+        drbg->name,
+        config,
+        result))
+{
+    log_error("Failed to append CSV result.");
+}
 cleanup:
 
     free(buffer);

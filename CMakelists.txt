@@ -12,5 +12,6 @@ add_executable(DRBG
     src/timer.c
     src/logger.c
     src/utils.c
+    src/csv.c
     drbgs/dummy.c
 )

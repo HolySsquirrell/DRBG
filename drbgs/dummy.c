@@ -65,6 +65,24 @@ static DRBGStatus dummy_reseed(
     return DRBG_STATUS_SUCCESS;
 }
 
+static DRBGStatus dummy_verify(
+    const void *ctx,
+    const uint8_t *output,
+    size_t length)
+{
+    (void)ctx;
+
+    for (size_t i = 0; i < length; ++i)
+    {
+        if (output[i] != (uint8_t)i)
+        {
+            return DRBG_STATUS_GENERATE_ERROR;
+        }
+    }
+
+    return DRBG_STATUS_SUCCESS;
+}
+
 static void dummy_uninstantiate(void *ctx)
 {
     DummyDRBGContext *context = (DummyDRBGContext *)ctx;
@@ -83,6 +101,8 @@ const DRBG DummyDRBG =
     .generate = dummy_generate,
 
     .reseed = dummy_reseed,
+
+    .verify = dummy_verify,
 
     .uninstantiate = dummy_uninstantiate
 };

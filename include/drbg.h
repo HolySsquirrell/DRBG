@@ -33,6 +33,11 @@ typedef struct
         size_t entropy_len,
         const uint8_t *additional_input,
         size_t additional_len);
+        
+    DRBGStatus (*verify)(
+        const void *context,
+        const uint8_t *output,
+        size_t output_len);
 
     void (*uninstantiate)(
         void *ctx);
