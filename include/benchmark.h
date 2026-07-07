@@ -8,11 +8,14 @@ struct DRBG;
 typedef struct BenchmarkConfig
 {
     size_t output_size;
+
     size_t reseed_interval;
 
     int save_output;
 
     size_t repetitions;
+
+    int verify_output;
 
 } BenchmarkConfig;
 

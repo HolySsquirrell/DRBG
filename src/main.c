@@ -3,21 +3,26 @@
 #include "utils.h"
 #include "config.h"
 #include "csv.h"
+#include "cli.h"
 
-int main(void)
+int main(int argc, char *argv[])
 {
-    BenchmarkConfig config =
-    {
-        .output_size = MB(10),
-        .reseed_interval = 0,
-        .save_output = 0,
-        .repetitions = 100
-    };
-
+    BenchmarkConfig config;
     BenchmarkResult result;
+    const DRBG *drbg;
+
+    if (!cli_parse_arguments(
+            argc,
+            argv,
+            &config,
+            &drbg))
+    {
+        return DRBG_EXIT_FAILURE;
+    }
+
     csv_write_header(RESULTS_CSV_FILE);
     benchmark_run(
-        &DummyDRBG,
+        drbg,
         &config,
         &result);
 
