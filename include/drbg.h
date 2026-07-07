@@ -1,6 +1,7 @@
 #ifndef DRBG_H
 #define DRBG_H
 
+#include "status.h"
 #include <stddef.h>
 #include <stdint.h>
 
@@ -10,7 +11,7 @@ typedef struct
 
     size_t context_size;
 
-    int (*instantiate)(
+    DRBGStatus (*instantiate)(
         void *ctx,
         const uint8_t *entropy,
         size_t entropy_len,
@@ -19,14 +20,14 @@ typedef struct
         const uint8_t *personalization,
         size_t personalization_len);
 
-    int (*generate)(
+    DRBGStatus (*generate)(
         void *ctx,
         uint8_t *output,
         size_t output_len,
         const uint8_t *additional_input,
         size_t additional_len);
 
-    int (*reseed)(
+    DRBGStatus (*reseed)(
         void *ctx,
         const uint8_t *entropy,
         size_t entropy_len,

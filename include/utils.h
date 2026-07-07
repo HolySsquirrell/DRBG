@@ -4,6 +4,12 @@
 #include <stddef.h>
 #include <stdint.h>
 
+#define BYTES_TO_BITS(x) ((x) * 8ULL)
+#define KB(x) ((size_t)(x) * 1024ULL)
+#define MB(x) (KB(x) * 1024ULL)
+#define GB(x) (MB(x) * 1024ULL)
+
+
 double bytes_to_megabytes(size_t bytes);
 
 void hex_dump(

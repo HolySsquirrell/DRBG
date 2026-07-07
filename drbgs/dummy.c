@@ -3,7 +3,7 @@
 #include <stddef.h>
 #include <stdint.h>
 
-static int dummy_instantiate(
+static DRBGStatus dummy_instantiate(
     void *ctx,
     const uint8_t *entropy,
     size_t entropy_len,
@@ -23,10 +23,10 @@ static int dummy_instantiate(
 
     context->counter = 0;
 
-    return 0;
+    return DRBG_STATUS_SUCCESS;
 }
 
-static int dummy_generate(
+static DRBGStatus dummy_generate(
     void *ctx,
     uint8_t *output,
     size_t output_len,
@@ -43,10 +43,10 @@ static int dummy_generate(
         output[i] = context->counter++;
     }
 
-    return 0;
+    return DRBG_STATUS_SUCCESS;
 }
 
-static int dummy_reseed(
+static DRBGStatus dummy_reseed(
     void *ctx,
     const uint8_t *entropy,
     size_t entropy_len,
@@ -62,7 +62,7 @@ static int dummy_reseed(
 
     context->counter = 0;
 
-    return 0;
+    return DRBG_STATUS_SUCCESS;
 }
 
 static void dummy_uninstantiate(void *ctx)
