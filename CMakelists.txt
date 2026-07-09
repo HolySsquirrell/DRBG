@@ -4,7 +4,7 @@ project(DRBG C)
 
 set(CMAKE_C_STANDARD 11)
 
-include_directories(include drbgs)
+include_directories(include drbgs crypto)
 
 add_executable(DRBG
     src/main.c
@@ -16,6 +16,14 @@ add_executable(DRBG
     src/cli.c
     src/registry.c
     src/entropy.c
+    crypto/crypto_hash.c
+    crypto/crypto_hmac.c
+    crypto/crypto_aes.c
     drbgs/dummy.c
 )
-target_link_libraries(DRBG PRIVATE bcrypt)
+find_package(OpenSSL REQUIRED)
+
+target_link_libraries(DRBG PRIVATE
+    OpenSSL::Crypto
+    bcrypt
+)

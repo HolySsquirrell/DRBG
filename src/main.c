@@ -5,6 +5,9 @@
 #include "csv.h"
 #include "cli.h"
 #include "entropy.h"
+#include "crypto_hash.h"
+#include "crypto_hmac.h"
+#include "crypto_aes.h"
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
