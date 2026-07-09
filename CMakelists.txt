@@ -15,5 +15,7 @@ add_executable(DRBG
     src/csv.c
     src/cli.c
     src/registry.c
+    src/entropy.c
     drbgs/dummy.c
 )
+target_link_libraries(DRBG PRIVATE bcrypt)

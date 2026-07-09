@@ -1,5 +1,5 @@
 #include "benchmark.h"
-
+#include "entropy.h"
 #include "drbg.h"
 #include "logger.h"
 #include "status.h"
@@ -56,12 +56,32 @@ DRBGStatus benchmark_run(
 
     timer_start(&timer);
 
+    uint8_t entropy[32];
+    uint8_t nonce[16];
+
+    EntropySeedMaterial seed =
+    {
+        .entropy = entropy,
+        .entropy_length = sizeof(entropy),
+
+        .nonce = nonce,
+        .nonce_length = sizeof(nonce)
+    };
+
+    status = entropy_get_seed_material(&seed);
+
+    if (status != DRBG_STATUS_SUCCESS)
+    {
+        log_error("Failed to acquire seed material.");
+        goto cleanup;
+    }
+
     status = drbg->instantiate(
         ctx,
-        NULL,
-        0,
-        NULL,
-        0,
+        seed.entropy,
+        seed.entropy_length,
+        seed.nonce,
+        seed.nonce_length,
         NULL,
         0);
 
