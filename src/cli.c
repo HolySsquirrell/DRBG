@@ -6,6 +6,7 @@
 
 #include <ctype.h>
 #include <stdio.h>
+#include <stdint.h>
 #include <stdlib.h>
 #include <string.h>
 
@@ -80,6 +81,7 @@ void cli_print_usage(const char *program_name)
     printf("  --save          Save generated output\n");
     printf("  --verify        Enable verification\n");
     printf("  --no-verify     Disable verification\n");
+    printf("  --reseed <N>    Reseed after N generate requests; 0 disables it\n");
     printf("  --help          Display this help\n\n");
 }
 
@@ -163,6 +165,36 @@ bool cli_parse_arguments(
         {
             cli_print_usage(argv[0]);
             return false;
+        }
+        else if (strcmp(argv[arg], "--reseed") == 0)
+        {
+            if (arg + 1 >= argc)
+            {
+                log_error("Missing value after --reseed.");
+                return false;
+            }
+
+            char *end = NULL;
+
+            unsigned long long interval =
+                strtoull(argv[arg + 1], &end, 10);
+
+            if (end == argv[arg + 1] ||
+                *end != '\0' ||
+                interval > SIZE_MAX)
+            {
+                log_error(
+                    "Invalid reseed interval: %s",
+                    argv[arg + 1]);
+
+                return false;
+            }
+
+            config->reseed_interval =
+                (size_t)interval;
+
+            arg += 2;
+            continue;
         }
         else
         {

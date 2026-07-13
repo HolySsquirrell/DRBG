@@ -1,12 +1,13 @@
 #include "registry.h"
 
 #include "dummy.h"
-
+#include "hash_drbg.h"
 #include <string.h>
 
 static const DRBGEntry registry[] =
 {
     { "dummy", &DummyDRBG },
+    { "hash", &HashDRBG }
 };
 
 const DRBG *drbg_find(const char *name)

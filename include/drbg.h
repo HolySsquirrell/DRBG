@@ -10,6 +10,7 @@ typedef struct
     const char *name;
 
     size_t context_size;
+    size_t max_request_size;
 
     DRBGStatus (*instantiate)(
         void *ctx,

@@ -25,11 +25,14 @@ typedef struct BenchmarkResult
     double generate_time_ms;
     double reseed_time_ms;
     double cleanup_time_ms;
-
+    double entropy_time_ms;
+    double reseed_entropy_time_ms;
     double total_time_ms;
 
     double throughput_MBps;
-
+    double effective_throughput_MBps;
+    size_t reseed_count;
+    size_t generate_request_count;
     double min_generate_time_ms;
     double max_generate_time_ms;
     double average_generate_time_ms;

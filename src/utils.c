@@ -1,42 +1,92 @@
 #include "utils.h"
 
 #include <stdio.h>
-#include <stddef.h>
-#include <stdint.h>
 
 double bytes_to_megabytes(size_t bytes)
 {
-    return (double)bytes / (1024.0 * 1024.0);
+    return (double)bytes /
+           (1024.0 * 1024.0);
 }
 
 void hex_dump(
     const uint8_t *data,
     size_t length)
 {
-    for(size_t i = 0; i < length; i++)
+    if (data == NULL)
+    {
+        return;
+    }
+
+    for (size_t i = 0; i < length; ++i)
     {
         printf("%02X ", data[i]);
 
-        if((i + 1) % 16 == 0)
+        if ((i + 1) % 16 == 0)
+        {
             printf("\n");
+        }
     }
 
-    printf("\n");
+    if (length % 16 != 0)
+    {
+        printf("\n");
+    }
 }
 
-int write_binary_file(
+void secure_zero(
+    void *memory,
+    size_t length)
+{
+    if (memory == NULL)
+    {
+        return;
+    }
+
+    volatile uint8_t *bytes =
+        (volatile uint8_t *)memory;
+
+    while (length > 0)
+    {
+        *bytes = 0;
+
+        ++bytes;
+        --length;
+    }
+}
+
+bool write_binary_file(
     const char *filename,
     const uint8_t *data,
     size_t length)
 {
-    FILE *fp = fopen(filename, "wb");
+    if (filename == NULL)
+    {
+        return false;
+    }
 
-    if(fp == NULL)
-        return -1;
+    if (length > 0 && data == NULL)
+    {
+        return false;
+    }
 
-    fwrite(data, 1, length, fp);
+    FILE *file =
+        fopen(filename, "wb");
 
-    fclose(fp);
+    if (file == NULL)
+    {
+        return false;
+    }
 
-    return 0;
+    size_t bytes_written =
+        fwrite(
+            data,
+            1,
+            length,
+            file);
+
+    int close_result =
+        fclose(file);
+
+    return bytes_written == length &&
+           close_result == 0;
 }

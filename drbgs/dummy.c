@@ -93,6 +93,8 @@ static void dummy_uninstantiate(void *ctx)
 const DRBG DummyDRBG =
 {
     .name = "Dummy_DRBG",
+    
+    .max_request_size = 0,
 
     .context_size = sizeof(DummyDRBGContext),
 
