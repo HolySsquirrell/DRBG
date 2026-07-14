@@ -28,6 +28,44 @@ add_executable(DRBG
     drbgs/hash_drbg.c
     drbgs/dummy.c
 )
+
+add_executable(drbg_tests
+    tests/test_main.c
+    tests/hash_math_test.c
+    tests/hash_df_test.c
+    tests/hash_drbg_kat.c
+    tests/hash_drbg_nist_kat.c
+    tests/hash_drbg_nist_extended_kat.c
+    tests/hash_drbg_boundary_test.c
+
+    drbgs/hash_drbg.c
+
+    algorithms/hash_df.c
+    algorithms/hash_math.c
+    algorithms/hashgen.c
+
+    crypto/crypto_hash.c
+
+    src/utils.c
+)
+
+target_include_directories(drbg_tests PRIVATE
+    ${PROJECT_SOURCE_DIR}/include
+    ${PROJECT_SOURCE_DIR}/drbgs
+    ${PROJECT_SOURCE_DIR}/algorithms
+    ${PROJECT_SOURCE_DIR}/crypto
+)
+
+target_link_libraries(drbg_tests PRIVATE
+    OpenSSL::Crypto
+    bcrypt
+)
+enable_testing()
+
+add_test(
+    NAME HashDRBGTests
+    COMMAND drbg_tests
+)
 find_package(OpenSSL REQUIRED)
 
 target_link_libraries(DRBG PRIVATE

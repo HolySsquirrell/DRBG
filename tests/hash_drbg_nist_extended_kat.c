@@ -1,0 +1,451 @@
+#include "drbg.h"
+#include "hash_drbg.h"
+#include "status.h"
+
+#include <stdbool.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+/*
+ * Official NIST CAVP Hash_DRBG SHA-256 vectors.
+ *
+ * Both vectors request 1024 returned bits. NIST compares the output of
+ * the second Generate call; the first output is generated and discarded.
+ */
+
+static bool expect_bytes(
+    const char *test_name,
+    const uint8_t *actual,
+    const uint8_t *expected,
+    size_t length)
+{
+    if (memcmp(actual, expected, length) == 0)
+    {
+        return true;
+    }
+
+    fprintf(stderr, "    %s output mismatch\n", test_name);
+
+    for (size_t i = 0; i < length; ++i)
+    {
+        if (actual[i] != expected[i])
+        {
+            fprintf(
+                stderr,
+                "    first difference at byte %zu: "
+                "got %02X, expected %02X\n",
+                i,
+                actual[i],
+                expected[i]);
+
+            break;
+        }
+    }
+
+    return false;
+}
+
+static void clear_test_output(
+    uint8_t *buffer,
+    size_t length)
+{
+    volatile uint8_t *bytes =
+        (volatile uint8_t *)buffer;
+
+    while (length > 0)
+    {
+        *bytes++ = 0;
+        --length;
+    }
+}
+
+bool test_hash_drbg_nist_optional_inputs(void)
+{
+    static const uint8_t entropy_input[32] =
+    {
+        0x68, 0xC4, 0x3A, 0x00, 0x8F, 0xE4, 0x6A, 0x82,
+        0x3D, 0x26, 0x0A, 0x9D, 0x7F, 0xA3, 0x88, 0xFB,
+        0x9E, 0x40, 0x1F, 0x01, 0x97, 0xE7, 0xE7, 0x58,
+        0xA7, 0x44, 0xB4, 0xBA, 0xBB, 0x3F, 0x46, 0x51
+    };
+
+    static const uint8_t nonce[16] =
+    {
+        0xEB, 0x68, 0x25, 0x77, 0x78, 0x56, 0x33, 0x18,
+        0x84, 0xAA, 0xF3, 0x75, 0x1B, 0x3E, 0x40, 0x06
+    };
+
+    static const uint8_t personalization[32] =
+    {
+        0x23, 0xCE, 0x0D, 0x32, 0xCB, 0xF2, 0xD2, 0x64,
+        0x67, 0xF0, 0xD6, 0x2A, 0xCF, 0xF1, 0xA3, 0xAC,
+        0xBA, 0xA6, 0xD2, 0x74, 0x6D, 0xC3, 0xEE, 0x7A,
+        0xA9, 0xD3, 0x2C, 0x88, 0x07, 0x88, 0xAF, 0xC8
+    };
+
+    static const uint8_t additional_input_a[32] =
+    {
+        0xA3, 0x1B, 0x9F, 0x13, 0xB5, 0x8D, 0x4F, 0xA2,
+        0xF8, 0xD8, 0xAC, 0x42, 0xB6, 0x2A, 0x20, 0x7F,
+        0xF6, 0x47, 0x33, 0x9A, 0x14, 0x6B, 0xD8, 0xB2,
+        0x68, 0xB3, 0x3D, 0x4A, 0xFF, 0x57, 0xAD, 0xBD
+    };
+
+    static const uint8_t additional_input_b[32] =
+    {
+        0xD3, 0x4F, 0xC6, 0x50, 0x4E, 0xCA, 0x4B, 0x56,
+        0x81, 0x93, 0xC7, 0x53, 0x57, 0xB0, 0xD3, 0x82,
+        0x1A, 0x48, 0xC7, 0x7F, 0xF8, 0x0D, 0x6D, 0xBD,
+        0x21, 0xC6, 0xCF, 0x04, 0x5F, 0xF4, 0x89, 0xCF
+    };
+
+    static const uint8_t expected[128] =
+    {
+        0xAB, 0xB4, 0xEC, 0xBA, 0xCD, 0x4E, 0x8F, 0xA9,
+        0x43, 0xC7, 0x22, 0x1A, 0xED, 0x43, 0x38, 0x61,
+        0xC3, 0xB2, 0x03, 0x23, 0x26, 0x57, 0xEC, 0x4C,
+        0x41, 0x7D, 0x02, 0x1F, 0x90, 0x5D, 0x91, 0x1D,
+        0xB1, 0x05, 0x8F, 0xF1, 0xE1, 0x1E, 0x27, 0x22,
+        0x32, 0x48, 0x2E, 0xC9, 0x6B, 0xAE, 0x7C, 0xB4,
+        0xEF, 0xC1, 0x35, 0x50, 0x2D, 0xBE, 0x41, 0x72,
+        0x40, 0x77, 0x07, 0x7F, 0x6D, 0xE7, 0x9B, 0x71,
+        0x36, 0x70, 0xC3, 0x85, 0xD0, 0x46, 0x44, 0xE1,
+        0x28, 0x1C, 0x3E, 0x58, 0x2E, 0x00, 0x16, 0x25,
+        0x5A, 0xBB, 0xE5, 0xF8, 0xC0, 0x6D, 0x0D, 0xE5,
+        0x71, 0x60, 0x55, 0x9F, 0x0C, 0x08, 0xF7, 0xFB,
+        0x5B, 0xE3, 0x56, 0x3C, 0x64, 0x99, 0x66, 0x19,
+        0x0F, 0x8D, 0x32, 0x61, 0x36, 0x44, 0x47, 0x53,
+        0x7D, 0xE2, 0xC7, 0x37, 0x1C, 0x6E, 0x8C, 0x30,
+        0x89, 0x33, 0xD2, 0x71, 0x45, 0xBF, 0x90, 0xAB
+    };
+
+    bool passed = false;
+    void *ctx = NULL;
+
+    uint8_t discarded_output[sizeof(expected)] = {0};
+    uint8_t returned_bits[sizeof(expected)] = {0};
+
+    if (HashDRBG.context_size == 0 ||
+        HashDRBG.instantiate == NULL ||
+        HashDRBG.generate == NULL ||
+        HashDRBG.uninstantiate == NULL)
+    {
+        fprintf(stderr, "    incomplete HashDRBG descriptor\n");
+        return false;
+    }
+
+    ctx = calloc(1, HashDRBG.context_size);
+
+    if (ctx == NULL)
+    {
+        fprintf(stderr, "    failed to allocate Hash_DRBG context\n");
+        return false;
+    }
+
+    DRBGStatus status =
+        HashDRBG.instantiate(
+            ctx,
+            entropy_input,
+            sizeof(entropy_input),
+            nonce,
+            sizeof(nonce),
+            personalization,
+            sizeof(personalization));
+
+    if (status != DRBG_STATUS_SUCCESS)
+    {
+        fprintf(
+            stderr,
+            "    optional-input instantiate returned status %d\n",
+            (int)status);
+
+        goto cleanup;
+    }
+
+    status =
+        HashDRBG.generate(
+            ctx,
+            discarded_output,
+            sizeof(discarded_output),
+            additional_input_a,
+            sizeof(additional_input_a));
+
+    if (status != DRBG_STATUS_SUCCESS)
+    {
+        fprintf(
+            stderr,
+            "    first optional-input generate returned status %d\n",
+            (int)status);
+
+        goto cleanup;
+    }
+
+    status =
+        HashDRBG.generate(
+            ctx,
+            returned_bits,
+            sizeof(returned_bits),
+            additional_input_b,
+            sizeof(additional_input_b));
+
+    if (status != DRBG_STATUS_SUCCESS)
+    {
+        fprintf(
+            stderr,
+            "    second optional-input generate returned status %d\n",
+            (int)status);
+
+        goto cleanup;
+    }
+
+    passed =
+        expect_bytes(
+            "NIST personalization/additional-input KAT",
+            returned_bits,
+            expected,
+            sizeof(expected));
+
+cleanup:
+
+    HashDRBG.uninstantiate(ctx);
+
+    clear_test_output(
+        discarded_output,
+        sizeof(discarded_output));
+
+    clear_test_output(
+        returned_bits,
+        sizeof(returned_bits));
+
+    free(ctx);
+
+    return passed;
+}
+
+bool test_hash_drbg_nist_reseed(void)
+{
+    static const uint8_t entropy_input[32] =
+    {
+        0x29, 0xE1, 0xA4, 0x27, 0x09, 0xB7, 0xE8, 0x4D,
+        0xBE, 0x50, 0x78, 0x8F, 0xBA, 0xD8, 0xCB, 0x60,
+        0x9C, 0x12, 0x7E, 0xEC, 0x32, 0x62, 0x63, 0x6A,
+        0x51, 0x3F, 0xD9, 0x05, 0x9F, 0xB8, 0xBA, 0xE4
+    };
+
+    static const uint8_t nonce[16] =
+    {
+        0xF3, 0xA5, 0x21, 0xF2, 0x8D, 0xFF, 0xBD, 0x97,
+        0x57, 0x4C, 0x40, 0x5B, 0x69, 0xB6, 0x36, 0xAD
+    };
+
+    static const uint8_t personalization[32] =
+    {
+        0xC9, 0x9A, 0x11, 0x47, 0xD8, 0xDB, 0x40, 0x1F,
+        0x4F, 0xCF, 0x76, 0x38, 0x67, 0x29, 0x67, 0x58,
+        0xE2, 0x64, 0x04, 0xA3, 0x0A, 0x4A, 0x9F, 0xA4,
+        0x96, 0xA7, 0x17, 0xF2, 0x1F, 0x5D, 0x74, 0x9B
+    };
+
+    static const uint8_t additional_input_a[32] =
+    {
+        0x17, 0x25, 0x4E, 0xA3, 0x92, 0xAE, 0xAD, 0x0D,
+        0xC9, 0x49, 0x92, 0xD8, 0x67, 0x81, 0x34, 0x97,
+        0xD3, 0xFD, 0x6D, 0xC7, 0x66, 0x96, 0x67, 0x15,
+        0x0A, 0xFE, 0x6C, 0x28, 0xA2, 0xB8, 0x99, 0x46
+    };
+
+    static const uint8_t reseed_entropy_a[32] =
+    {
+        0xD5, 0x26, 0x6C, 0x01, 0xE1, 0x0D, 0x72, 0xDD,
+        0x7E, 0x8A, 0x3B, 0xF7, 0x17, 0xCC, 0xCB, 0x8F,
+        0x64, 0x3C, 0xA2, 0x33, 0x31, 0x4E, 0x3E, 0x74,
+        0xF1, 0x06, 0xF4, 0x6B, 0x09, 0x0E, 0x5C, 0x73
+    };
+
+    static const uint8_t additional_input_b[32] =
+    {
+        0x15, 0x7D, 0xDE, 0x59, 0xCE, 0xB2, 0xC6, 0x62,
+        0xC8, 0x66, 0x5F, 0xBE, 0x62, 0x3E, 0xC7, 0x58,
+        0x73, 0xFD, 0x0C, 0x5C, 0xCC, 0xE7, 0x9A, 0x9F,
+        0x5B, 0x70, 0x98, 0xEC, 0x8E, 0xD7, 0x7B, 0x67
+    };
+
+    static const uint8_t reseed_entropy_b[32] =
+    {
+        0xC7, 0xE5, 0xF0, 0x3D, 0x26, 0xBD, 0xF9, 0x55,
+        0x33, 0x38, 0xE6, 0x4B, 0xA6, 0x4C, 0xE5, 0xB5,
+        0x75, 0x1B, 0x04, 0xF9, 0xC6, 0x99, 0x92, 0x22,
+        0x14, 0x95, 0xF2, 0x22, 0x7B, 0x97, 0x99, 0xD0
+    };
+
+    static const uint8_t expected[128] =
+    {
+        0xE3, 0x04, 0xDE, 0x9F, 0xFD, 0x88, 0x5C, 0xF9,
+        0x17, 0xEA, 0xD7, 0x8F, 0x05, 0x93, 0x9B, 0x8C,
+        0xF5, 0x47, 0x09, 0xFC, 0x2D, 0x0C, 0x79, 0x9A,
+        0x98, 0xB5, 0x43, 0x48, 0x63, 0x37, 0x20, 0x44,
+        0x77, 0xB1, 0x06, 0x0B, 0xCE, 0xAE, 0x2A, 0x22,
+        0xF7, 0xFF, 0x42, 0xB6, 0xCB, 0x4B, 0x4B, 0xC0,
+        0x61, 0x0A, 0xE2, 0xB6, 0x75, 0x58, 0xA7, 0xC5,
+        0x4B, 0x65, 0xE4, 0x5B, 0xB9, 0xF1, 0xA8, 0x69,
+        0x81, 0xB7, 0x47, 0x05, 0xB4, 0x8C, 0xDB, 0xF7,
+        0xD8, 0xDE, 0xCF, 0x87, 0x86, 0x82, 0x67, 0xBD,
+        0x94, 0x8E, 0x93, 0x94, 0xAA, 0x43, 0x57, 0xF8,
+        0xDB, 0xBF, 0x30, 0x61, 0x2A, 0x0E, 0xB5, 0xB1,
+        0x31, 0x88, 0x4C, 0x22, 0x0E, 0x44, 0x2D, 0x36,
+        0x77, 0x8E, 0x8D, 0x74, 0x09, 0x1D, 0x8A, 0x27,
+        0xC0, 0x70, 0xFE, 0x69, 0x04, 0x69, 0xE0, 0x7F,
+        0x3A, 0xAB, 0xEE, 0xF7, 0xC6, 0x29, 0xBF, 0xAB
+    };
+
+    bool passed = false;
+    void *ctx = NULL;
+
+    uint8_t discarded_output[sizeof(expected)] = {0};
+    uint8_t returned_bits[sizeof(expected)] = {0};
+
+    if (HashDRBG.context_size == 0 ||
+        HashDRBG.instantiate == NULL ||
+        HashDRBG.generate == NULL ||
+        HashDRBG.reseed == NULL ||
+        HashDRBG.uninstantiate == NULL)
+    {
+        fprintf(stderr, "    incomplete HashDRBG descriptor\n");
+        return false;
+    }
+
+    ctx = calloc(1, HashDRBG.context_size);
+
+    if (ctx == NULL)
+    {
+        fprintf(stderr, "    failed to allocate Hash_DRBG context\n");
+        return false;
+    }
+
+    DRBGStatus status =
+        HashDRBG.instantiate(
+            ctx,
+            entropy_input,
+            sizeof(entropy_input),
+            nonce,
+            sizeof(nonce),
+            personalization,
+            sizeof(personalization));
+
+    if (status != DRBG_STATUS_SUCCESS)
+    {
+        fprintf(
+            stderr,
+            "    reseed KAT instantiate returned status %d\n",
+            (int)status);
+
+        goto cleanup;
+    }
+
+    /*
+     * For a NIST prediction-resistance Generate request, the generic
+     * DRBG process first calls Reseed using EntropyInputPR and the
+     * request's AdditionalInput. It then calls Hash_DRBG_Generate with
+     * additional_input set to Null.
+     *
+     * Reproducing those two steps explicitly exercises this project's
+     * public reseed callback without requiring a prediction-resistance
+     * flag in the generic DRBG interface.
+     */
+    status =
+        HashDRBG.reseed(
+            ctx,
+            reseed_entropy_a,
+            sizeof(reseed_entropy_a),
+            additional_input_a,
+            sizeof(additional_input_a));
+
+    if (status != DRBG_STATUS_SUCCESS)
+    {
+        fprintf(
+            stderr,
+            "    first NIST reseed returned status %d\n",
+            (int)status);
+
+        goto cleanup;
+    }
+
+    status =
+        HashDRBG.generate(
+            ctx,
+            discarded_output,
+            sizeof(discarded_output),
+            NULL,
+            0);
+
+    if (status != DRBG_STATUS_SUCCESS)
+    {
+        fprintf(
+            stderr,
+            "    first generate after reseed returned status %d\n",
+            (int)status);
+
+        goto cleanup;
+    }
+
+    status =
+        HashDRBG.reseed(
+            ctx,
+            reseed_entropy_b,
+            sizeof(reseed_entropy_b),
+            additional_input_b,
+            sizeof(additional_input_b));
+
+    if (status != DRBG_STATUS_SUCCESS)
+    {
+        fprintf(
+            stderr,
+            "    second NIST reseed returned status %d\n",
+            (int)status);
+
+        goto cleanup;
+    }
+
+    status =
+        HashDRBG.generate(
+            ctx,
+            returned_bits,
+            sizeof(returned_bits),
+            NULL,
+            0);
+
+    if (status != DRBG_STATUS_SUCCESS)
+    {
+        fprintf(
+            stderr,
+            "    second generate after reseed returned status %d\n",
+            (int)status);
+
+        goto cleanup;
+    }
+
+    passed =
+        expect_bytes(
+            "NIST reseed/prediction-resistance KAT",
+            returned_bits,
+            expected,
+            sizeof(expected));
+
+cleanup:
+
+    HashDRBG.uninstantiate(ctx);
+
+    clear_test_output(
+        discarded_output,
+        sizeof(discarded_output));
+
+    clear_test_output(
+        returned_bits,
+        sizeof(returned_bits));
+
+    free(ctx);
+
+    return passed;
+}
