@@ -72,3 +72,53 @@ target_link_libraries(DRBG PRIVATE
     OpenSSL::Crypto
     bcrypt
 )
+
+add_executable(drbg_rsp_runner
+    tests/nist_rsp_runner.c
+
+    drbgs/hash_drbg.c
+
+    algorithms/hash_df.c
+    algorithms/hash_math.c
+    algorithms/hashgen.c
+
+    crypto/crypto_hash.c
+)
+
+target_include_directories(drbg_rsp_runner PRIVATE
+    ${PROJECT_SOURCE_DIR}/include
+    ${PROJECT_SOURCE_DIR}/drbgs
+    ${PROJECT_SOURCE_DIR}/algorithms
+    ${PROJECT_SOURCE_DIR}/crypto
+)
+
+target_link_libraries(drbg_rsp_runner PRIVATE
+    OpenSSL::Crypto
+)
+
+set(NIST_DRBG_VECTOR_DIR "" CACHE PATH
+    "Directory containing extracted NIST DRBG response files")
+
+if(NIST_DRBG_VECTOR_DIR)
+    file(GLOB_RECURSE NIST_HASH_DRBG_RESPONSE_FILES
+        CONFIGURE_DEPENDS
+        "${NIST_DRBG_VECTOR_DIR}/*.rsp"
+    )
+
+
+    list(FILTER NIST_HASH_DRBG_RESPONSE_FILES
+        INCLUDE REGEX "[/\\\\]Hash_DRBG\\.rsp$")
+
+    if(NIST_HASH_DRBG_RESPONSE_FILES)
+        enable_testing()
+
+        add_test(
+            NAME NISTHashDRBGSHA256ResponseFiles
+            COMMAND drbg_rsp_runner
+                ${NIST_HASH_DRBG_RESPONSE_FILES}
+        )
+    else()
+        message(WARNING
+            "NIST_DRBG_VECTOR_DIR was set, but no Hash_DRBG.rsp files were found")
+    endif()
+endif()
