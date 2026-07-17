@@ -2,6 +2,24 @@ cmake_minimum_required(VERSION 3.15)
 
 project(DRBG C)
 
+option(
+    DRBG_ENABLE_STRICT_WARNINGS
+    "Enable strict compiler warnings"
+    ON
+)
+
+option(
+    DRBG_ENABLE_ANALYZER
+    "Enable GCC static analyzer"
+    OFF
+)
+
+option(
+    DRBG_ENABLE_SANITIZERS
+    "Enable AddressSanitizer and UndefinedBehaviorSanitizer"
+    OFF
+)
+
 set(CMAKE_C_STANDARD 11)
 
 include_directories(include drbgs crypto algorithms)
@@ -122,3 +140,66 @@ if(NIST_DRBG_VECTOR_DIR)
             "NIST_DRBG_VECTOR_DIR was set, but no Hash_DRBG.rsp files were found")
     endif()
 endif()
+
+function(drbg_enable_diagnostics target_name)
+    if(NOT TARGET ${target_name})
+        message(
+            FATAL_ERROR
+            "Diagnostic target does not exist: ${target_name}"
+        )
+    endif()
+
+    if(CMAKE_C_COMPILER_ID STREQUAL "GNU")
+        if(DRBG_ENABLE_STRICT_WARNINGS)
+            target_compile_options(
+                ${target_name}
+                PRIVATE
+                    -Wall
+                    -Wextra
+                    -Wpedantic
+                    -Wformat=2
+                    -Wshadow
+                    -Wconversion
+                    -Wsign-conversion
+                    -Wstrict-prototypes
+                    -Wundef
+                    -Wcast-qual
+            )
+        endif()
+
+        if(DRBG_ENABLE_ANALYZER)
+            target_compile_options(
+                ${target_name}
+                PRIVATE
+                    -fanalyzer
+            )
+        endif()
+
+        if(DRBG_ENABLE_SANITIZERS)
+            target_compile_options(
+                ${target_name}
+                PRIVATE
+                    -fsanitize=address,undefined
+                    -fno-omit-frame-pointer
+                    -fno-sanitize-recover=all
+                    -O1
+                    -g
+            )
+
+            target_link_options(
+                ${target_name}
+                PRIVATE
+                    -fsanitize=address,undefined
+            )
+        endif()
+    else()
+        message(
+            WARNING
+            "Diagnostic settings currently support GCC only"
+        )
+    endif()
+endfunction()
+
+drbg_enable_diagnostics(DRBG)
+drbg_enable_diagnostics(drbg_tests)
+drbg_enable_diagnostics(drbg_rsp_runner)
