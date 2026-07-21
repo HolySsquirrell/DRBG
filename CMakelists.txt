@@ -42,8 +42,10 @@ add_executable(DRBG
     algorithms/hash_df.c
     algorithms/hash_math.c
     algorithms/hashgen.c
+    algorithms/hmac_drbg_update.c
 
     drbgs/hash_drbg.c
+    drbgs/hmac_drbg.c
     drbgs/dummy.c
 )
 
