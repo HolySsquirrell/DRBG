@@ -2,6 +2,10 @@ cmake_minimum_required(VERSION 3.15)
 
 project(DRBG C)
 
+set(CMAKE_C_STANDARD 11)
+set(CMAKE_C_STANDARD_REQUIRED ON)
+set(CMAKE_C_EXTENSIONS OFF)
+
 option(
     DRBG_ENABLE_STRICT_WARNINGS
     "Enable strict compiler warnings"
@@ -20,128 +24,16 @@ option(
     OFF
 )
 
-set(CMAKE_C_STANDARD 11)
-
-include_directories(include drbgs crypto algorithms)
-
-add_executable(DRBG
-    src/main.c
-    src/benchmark.c
-    src/timer.c
-    src/logger.c
-    src/utils.c
-    src/csv.c
-    src/cli.c
-    src/registry.c
-    src/entropy.c
-
-    crypto/crypto_hash.c
-    crypto/crypto_hmac.c
-    crypto/crypto_aes.c
-
-    algorithms/hash_df.c
-    algorithms/hash_math.c
-    algorithms/hashgen.c
-    algorithms/hmac_drbg_update.c
-
-    drbgs/hash_drbg.c
-    drbgs/hmac_drbg.c
-    drbgs/dummy.c
-)
-
-add_executable(drbg_tests
-    tests/test_main.c
-    tests/hash_math_test.c
-    tests/hash_df_test.c
-    tests/hash_drbg_kat.c
-    tests/hash_drbg_nist_kat.c
-    tests/hash_drbg_nist_extended_kat.c
-    tests/hash_drbg_boundary_test.c
-
-    drbgs/hash_drbg.c
-
-    algorithms/hash_df.c
-    algorithms/hash_math.c
-    algorithms/hashgen.c
-
-    crypto/crypto_hash.c
-
-    src/utils.c
-)
-
-target_include_directories(drbg_tests PRIVATE
-    ${PROJECT_SOURCE_DIR}/include
-    ${PROJECT_SOURCE_DIR}/drbgs
-    ${PROJECT_SOURCE_DIR}/algorithms
-    ${PROJECT_SOURCE_DIR}/crypto
-)
-
-target_link_libraries(drbg_tests PRIVATE
-    OpenSSL::Crypto
-    bcrypt
-)
-enable_testing()
-
-add_test(
-    NAME HashDRBGTests
-    COMMAND drbg_tests
-)
 find_package(OpenSSL REQUIRED)
 
-target_link_libraries(DRBG PRIVATE
-    OpenSSL::Crypto
-    bcrypt
-)
+enable_testing()
 
-add_executable(drbg_rsp_runner
-    tests/nist_rsp_runner.c
-
-    drbgs/hash_drbg.c
-
-    algorithms/hash_df.c
-    algorithms/hash_math.c
-    algorithms/hashgen.c
-
-    crypto/crypto_hash.c
-)
-
-target_include_directories(drbg_rsp_runner PRIVATE
+set(DRBG_INCLUDE_DIRS
     ${PROJECT_SOURCE_DIR}/include
     ${PROJECT_SOURCE_DIR}/drbgs
-    ${PROJECT_SOURCE_DIR}/algorithms
     ${PROJECT_SOURCE_DIR}/crypto
+    ${PROJECT_SOURCE_DIR}/algorithms
 )
-
-target_link_libraries(drbg_rsp_runner PRIVATE
-    OpenSSL::Crypto
-)
-
-set(NIST_DRBG_VECTOR_DIR "" CACHE PATH
-    "Directory containing extracted NIST DRBG response files")
-
-if(NIST_DRBG_VECTOR_DIR)
-    file(GLOB_RECURSE NIST_HASH_DRBG_RESPONSE_FILES
-        CONFIGURE_DEPENDS
-        "${NIST_DRBG_VECTOR_DIR}/*.rsp"
-    )
-
-
-    list(FILTER NIST_HASH_DRBG_RESPONSE_FILES
-        INCLUDE REGEX "[/\\\\]Hash_DRBG\\.rsp$")
-
-    if(NIST_HASH_DRBG_RESPONSE_FILES)
-        enable_testing()
-
-        add_test(
-            NAME NISTHashDRBGSHA256ResponseFiles
-            COMMAND drbg_rsp_runner
-                ${NIST_HASH_DRBG_RESPONSE_FILES}
-        )
-    else()
-        message(WARNING
-            "NIST_DRBG_VECTOR_DIR was set, but no Hash_DRBG.rsp files were found")
-    endif()
-endif()
 
 function(drbg_enable_diagnostics target_name)
     if(NOT TARGET ${target_name})
@@ -178,6 +70,14 @@ function(drbg_enable_diagnostics target_name)
         endif()
 
         if(DRBG_ENABLE_SANITIZERS)
+            if(MINGW)
+                message(
+                    FATAL_ERROR
+                    "ASan and UBSan runtimes are unavailable in the "
+                    "current MSYS2 UCRT64 MinGW toolchain."
+                )
+            endif()
+
             target_compile_options(
                 ${target_name}
                 PRIVATE
@@ -202,6 +102,212 @@ function(drbg_enable_diagnostics target_name)
     endif()
 endfunction()
 
+add_executable(DRBG
+    src/main.c
+    src/benchmark.c
+    src/timer.c
+    src/logger.c
+    src/utils.c
+    src/csv.c
+    src/cli.c
+    src/registry.c
+    src/entropy.c
+
+    crypto/crypto_hash.c
+    crypto/crypto_hmac.c
+    crypto/crypto_aes.c
+
+    algorithms/hash_df.c
+    algorithms/hash_math.c
+    algorithms/hashgen.c
+    algorithms/hmac_drbg_update.c
+
+    drbgs/hash_drbg.c
+    drbgs/hmac_drbg.c
+    drbgs/dummy.c
+)
+
+target_include_directories(
+    DRBG
+    PRIVATE
+        ${DRBG_INCLUDE_DIRS}
+)
+
+target_link_libraries(
+    DRBG
+    PRIVATE
+        OpenSSL::Crypto
+        bcrypt
+)
+
 drbg_enable_diagnostics(DRBG)
+
+add_executable(drbg_tests
+    tests/test_main.c
+
+    tests/hash_math_test.c
+    tests/hash_df_test.c
+
+    tests/hash_drbg_kat.c
+    tests/hash_drbg_nist_kat.c
+    tests/hash_drbg_nist_extended_kat.c
+    tests/hash_drbg_boundary_test.c
+
+
+    tests/hmac_drbg_update_test.c
+    tests/hmac_drbg_boundary_test.c
+
+    drbgs/hash_drbg.c
+    algorithms/hash_df.c
+    algorithms/hash_math.c
+    algorithms/hashgen.c
+    crypto/crypto_hash.c
+
+    drbgs/hmac_drbg.c
+    algorithms/hmac_drbg_update.c
+    crypto/crypto_hmac.c
+
+    src/utils.c
+)
+
+target_include_directories(
+    drbg_tests
+    PRIVATE
+        ${DRBG_INCLUDE_DIRS}
+)
+
+target_link_libraries(
+    drbg_tests
+    PRIVATE
+        OpenSSL::Crypto
+)
+
 drbg_enable_diagnostics(drbg_tests)
+
+add_test(
+    NAME DRBGUnitTests
+    COMMAND drbg_tests
+)
+add_executable(drbg_rsp_runner
+    tests/nist_rsp_runner.c
+
+    drbgs/hash_drbg.c
+
+    algorithms/hash_df.c
+    algorithms/hash_math.c
+    algorithms/hashgen.c
+
+    crypto/crypto_hash.c
+
+    src/utils.c
+)
+
+target_include_directories(
+    drbg_rsp_runner
+    PRIVATE
+        ${DRBG_INCLUDE_DIRS}
+)
+
+target_link_libraries(
+    drbg_rsp_runner
+    PRIVATE
+        OpenSSL::Crypto
+)
+
 drbg_enable_diagnostics(drbg_rsp_runner)
+
+add_executable(hmac_drbg_rsp_runner
+    tests/nist_hmac_rsp_runner.c
+
+    drbgs/hmac_drbg.c
+
+    algorithms/hmac_drbg_update.c
+
+    crypto/crypto_hmac.c
+
+    src/utils.c
+)
+
+target_include_directories(
+    hmac_drbg_rsp_runner
+    PRIVATE
+        ${DRBG_INCLUDE_DIRS}
+)
+
+target_link_libraries(
+    hmac_drbg_rsp_runner
+    PRIVATE
+        OpenSSL::Crypto
+)
+
+drbg_enable_diagnostics(hmac_drbg_rsp_runner)
+
+set(
+    NIST_DRBG_VECTOR_DIR
+    ""
+    CACHE PATH
+    "Directory containing extracted NIST DRBG response files"
+)
+
+if(NIST_DRBG_VECTOR_DIR)
+    file(
+        GLOB_RECURSE
+        NIST_DRBG_RESPONSE_FILES
+        CONFIGURE_DEPENDS
+        "${NIST_DRBG_VECTOR_DIR}/*.rsp"
+    )
+
+    set(
+        NIST_HASH_DRBG_RESPONSE_FILES
+        ${NIST_DRBG_RESPONSE_FILES}
+    )
+
+    list(
+        FILTER
+        NIST_HASH_DRBG_RESPONSE_FILES
+        INCLUDE REGEX
+        "[/\\\\]Hash_DRBG\\.rsp$"
+    )
+
+    if(NIST_HASH_DRBG_RESPONSE_FILES)
+        add_test(
+            NAME NISTHashDRBGSHA256ResponseFiles
+            COMMAND
+                drbg_rsp_runner
+                ${NIST_HASH_DRBG_RESPONSE_FILES}
+        )
+    else()
+        message(
+            WARNING
+            "NIST_DRBG_VECTOR_DIR was set, but no "
+            "Hash_DRBG.rsp files were found"
+        )
+    endif()
+
+    set(
+        NIST_HMAC_DRBG_RESPONSE_FILES
+        ${NIST_DRBG_RESPONSE_FILES}
+    )
+
+    list(
+        FILTER
+        NIST_HMAC_DRBG_RESPONSE_FILES
+        INCLUDE REGEX
+        "[/\\\\]HMAC_DRBG\\.rsp$"
+    )
+
+    if(NIST_HMAC_DRBG_RESPONSE_FILES)
+        add_test(
+            NAME NISTHMACDRBGSHA256ResponseFiles
+            COMMAND
+                hmac_drbg_rsp_runner
+                ${NIST_HMAC_DRBG_RESPONSE_FILES}
+        )
+    else()
+        message(
+            WARNING
+            "NIST_DRBG_VECTOR_DIR was set, but no "
+            "HMAC_DRBG.rsp files were found"
+        )
+    endif()
+endif()

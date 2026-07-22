@@ -11,6 +11,9 @@ bool test_hash_drbg_nist_optional_inputs(void);
 bool test_hash_drbg_nist_reseed(void);
 bool test_hash_drbg_boundaries(void);
 
+bool test_hmac_drbg_update(void);
+bool test_hmac_drbg_boundaries(void);
+
 typedef bool (*TestFunction)(void);
 
 typedef struct
@@ -38,6 +41,14 @@ int main(void)
         {
             "hash_drbg_boundaries",
             test_hash_drbg_boundaries
+        },
+        {
+            "hmac_drbg_update",
+            test_hmac_drbg_update
+        },
+        {
+            "hmac_drbg_boundaries",
+            test_hmac_drbg_boundaries
         }
     };
 
