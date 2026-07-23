@@ -12,6 +12,10 @@ bool test_hash_drbg_nist_reseed(void);
 bool test_hash_drbg_boundaries(void);
 
 bool test_hmac_drbg_update(void);
+bool test_hmac_drbg_nist_kat(void);
+bool test_hmac_drbg_nist_optional_inputs(void);
+bool test_hmac_drbg_nist_reseed(void);
+bool test_hmac_drbg_nist_prediction_resistance(void);
 bool test_hmac_drbg_boundaries(void);
 
 typedef bool (*TestFunction)(void);
@@ -28,6 +32,7 @@ int main(void)
     {
         {"hash_math", test_hash_math},
         {"hash_df", test_hash_df},
+
         {"hash_drbg_regression", test_hash_drbg_kat},
         {"hash_drbg_nist_basic", test_hash_drbg_nist_kat},
         {
@@ -42,9 +47,20 @@ int main(void)
             "hash_drbg_boundaries",
             test_hash_drbg_boundaries
         },
+
+        {"hmac_drbg_update", test_hmac_drbg_update},
+        {"hmac_drbg_nist_basic", test_hmac_drbg_nist_kat},
         {
-            "hmac_drbg_update",
-            test_hmac_drbg_update
+            "hmac_drbg_nist_optional_inputs",
+            test_hmac_drbg_nist_optional_inputs
+        },
+        {
+            "hmac_drbg_nist_reseed",
+            test_hmac_drbg_nist_reseed
+        },
+        {
+            "hmac_drbg_nist_prediction_resistance",
+            test_hmac_drbg_nist_prediction_resistance
         },
         {
             "hmac_drbg_boundaries",

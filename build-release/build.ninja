@@ -52,188 +52,172 @@ build cmake_object_order_depends_target_DRBG: phony || .
 build CMakeFiles/DRBG.dir/src/main.c.obj: C_COMPILER__DRBG_unscanned_Release C$:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/src/main.c || cmake_object_order_depends_target_DRBG
   CONFIG = Release
   DEP_FILE = CMakeFiles\DRBG.dir\src\main.c.obj.d
-  FLAGS = -O3 -DNDEBUG -std=gnu11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
+  FLAGS = -O3 -DNDEBUG -std=c11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
   INCLUDES = -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/include -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/drbgs -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/crypto -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/algorithms
   OBJECT_DIR = CMakeFiles\DRBG.dir
   OBJECT_FILE_DIR = CMakeFiles\DRBG.dir\src
-  TARGET_COMPILE_PDB = CMakeFiles\DRBG.dir\
-  TARGET_PDB = DRBG.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\DRBG.dir
 
 build CMakeFiles/DRBG.dir/src/benchmark.c.obj: C_COMPILER__DRBG_unscanned_Release C$:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/src/benchmark.c || cmake_object_order_depends_target_DRBG
   CONFIG = Release
   DEP_FILE = CMakeFiles\DRBG.dir\src\benchmark.c.obj.d
-  FLAGS = -O3 -DNDEBUG -std=gnu11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
+  FLAGS = -O3 -DNDEBUG -std=c11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
   INCLUDES = -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/include -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/drbgs -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/crypto -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/algorithms
   OBJECT_DIR = CMakeFiles\DRBG.dir
   OBJECT_FILE_DIR = CMakeFiles\DRBG.dir\src
-  TARGET_COMPILE_PDB = CMakeFiles\DRBG.dir\
-  TARGET_PDB = DRBG.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\DRBG.dir
 
 build CMakeFiles/DRBG.dir/src/timer.c.obj: C_COMPILER__DRBG_unscanned_Release C$:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/src/timer.c || cmake_object_order_depends_target_DRBG
   CONFIG = Release
   DEP_FILE = CMakeFiles\DRBG.dir\src\timer.c.obj.d
-  FLAGS = -O3 -DNDEBUG -std=gnu11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
+  FLAGS = -O3 -DNDEBUG -std=c11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
   INCLUDES = -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/include -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/drbgs -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/crypto -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/algorithms
   OBJECT_DIR = CMakeFiles\DRBG.dir
   OBJECT_FILE_DIR = CMakeFiles\DRBG.dir\src
-  TARGET_COMPILE_PDB = CMakeFiles\DRBG.dir\
-  TARGET_PDB = DRBG.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\DRBG.dir
 
 build CMakeFiles/DRBG.dir/src/logger.c.obj: C_COMPILER__DRBG_unscanned_Release C$:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/src/logger.c || cmake_object_order_depends_target_DRBG
   CONFIG = Release
   DEP_FILE = CMakeFiles\DRBG.dir\src\logger.c.obj.d
-  FLAGS = -O3 -DNDEBUG -std=gnu11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
+  FLAGS = -O3 -DNDEBUG -std=c11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
   INCLUDES = -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/include -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/drbgs -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/crypto -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/algorithms
   OBJECT_DIR = CMakeFiles\DRBG.dir
   OBJECT_FILE_DIR = CMakeFiles\DRBG.dir\src
-  TARGET_COMPILE_PDB = CMakeFiles\DRBG.dir\
-  TARGET_PDB = DRBG.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\DRBG.dir
 
 build CMakeFiles/DRBG.dir/src/utils.c.obj: C_COMPILER__DRBG_unscanned_Release C$:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/src/utils.c || cmake_object_order_depends_target_DRBG
   CONFIG = Release
   DEP_FILE = CMakeFiles\DRBG.dir\src\utils.c.obj.d
-  FLAGS = -O3 -DNDEBUG -std=gnu11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
+  FLAGS = -O3 -DNDEBUG -std=c11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
   INCLUDES = -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/include -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/drbgs -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/crypto -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/algorithms
   OBJECT_DIR = CMakeFiles\DRBG.dir
   OBJECT_FILE_DIR = CMakeFiles\DRBG.dir\src
-  TARGET_COMPILE_PDB = CMakeFiles\DRBG.dir\
-  TARGET_PDB = DRBG.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\DRBG.dir
 
 build CMakeFiles/DRBG.dir/src/csv.c.obj: C_COMPILER__DRBG_unscanned_Release C$:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/src/csv.c || cmake_object_order_depends_target_DRBG
   CONFIG = Release
   DEP_FILE = CMakeFiles\DRBG.dir\src\csv.c.obj.d
-  FLAGS = -O3 -DNDEBUG -std=gnu11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
+  FLAGS = -O3 -DNDEBUG -std=c11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
   INCLUDES = -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/include -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/drbgs -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/crypto -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/algorithms
   OBJECT_DIR = CMakeFiles\DRBG.dir
   OBJECT_FILE_DIR = CMakeFiles\DRBG.dir\src
-  TARGET_COMPILE_PDB = CMakeFiles\DRBG.dir\
-  TARGET_PDB = DRBG.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\DRBG.dir
 
 build CMakeFiles/DRBG.dir/src/cli.c.obj: C_COMPILER__DRBG_unscanned_Release C$:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/src/cli.c || cmake_object_order_depends_target_DRBG
   CONFIG = Release
   DEP_FILE = CMakeFiles\DRBG.dir\src\cli.c.obj.d
-  FLAGS = -O3 -DNDEBUG -std=gnu11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
+  FLAGS = -O3 -DNDEBUG -std=c11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
   INCLUDES = -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/include -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/drbgs -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/crypto -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/algorithms
   OBJECT_DIR = CMakeFiles\DRBG.dir
   OBJECT_FILE_DIR = CMakeFiles\DRBG.dir\src
-  TARGET_COMPILE_PDB = CMakeFiles\DRBG.dir\
-  TARGET_PDB = DRBG.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\DRBG.dir
 
 build CMakeFiles/DRBG.dir/src/registry.c.obj: C_COMPILER__DRBG_unscanned_Release C$:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/src/registry.c || cmake_object_order_depends_target_DRBG
   CONFIG = Release
   DEP_FILE = CMakeFiles\DRBG.dir\src\registry.c.obj.d
-  FLAGS = -O3 -DNDEBUG -std=gnu11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
+  FLAGS = -O3 -DNDEBUG -std=c11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
   INCLUDES = -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/include -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/drbgs -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/crypto -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/algorithms
   OBJECT_DIR = CMakeFiles\DRBG.dir
   OBJECT_FILE_DIR = CMakeFiles\DRBG.dir\src
-  TARGET_COMPILE_PDB = CMakeFiles\DRBG.dir\
-  TARGET_PDB = DRBG.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\DRBG.dir
 
 build CMakeFiles/DRBG.dir/src/entropy.c.obj: C_COMPILER__DRBG_unscanned_Release C$:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/src/entropy.c || cmake_object_order_depends_target_DRBG
   CONFIG = Release
   DEP_FILE = CMakeFiles\DRBG.dir\src\entropy.c.obj.d
-  FLAGS = -O3 -DNDEBUG -std=gnu11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
+  FLAGS = -O3 -DNDEBUG -std=c11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
   INCLUDES = -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/include -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/drbgs -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/crypto -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/algorithms
   OBJECT_DIR = CMakeFiles\DRBG.dir
   OBJECT_FILE_DIR = CMakeFiles\DRBG.dir\src
-  TARGET_COMPILE_PDB = CMakeFiles\DRBG.dir\
-  TARGET_PDB = DRBG.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\DRBG.dir
 
 build CMakeFiles/DRBG.dir/crypto/crypto_hash.c.obj: C_COMPILER__DRBG_unscanned_Release C$:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/crypto/crypto_hash.c || cmake_object_order_depends_target_DRBG
   CONFIG = Release
   DEP_FILE = CMakeFiles\DRBG.dir\crypto\crypto_hash.c.obj.d
-  FLAGS = -O3 -DNDEBUG -std=gnu11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
+  FLAGS = -O3 -DNDEBUG -std=c11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
   INCLUDES = -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/include -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/drbgs -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/crypto -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/algorithms
   OBJECT_DIR = CMakeFiles\DRBG.dir
   OBJECT_FILE_DIR = CMakeFiles\DRBG.dir\crypto
-  TARGET_COMPILE_PDB = CMakeFiles\DRBG.dir\
-  TARGET_PDB = DRBG.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\DRBG.dir
 
 build CMakeFiles/DRBG.dir/crypto/crypto_hmac.c.obj: C_COMPILER__DRBG_unscanned_Release C$:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/crypto/crypto_hmac.c || cmake_object_order_depends_target_DRBG
   CONFIG = Release
   DEP_FILE = CMakeFiles\DRBG.dir\crypto\crypto_hmac.c.obj.d
-  FLAGS = -O3 -DNDEBUG -std=gnu11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
+  FLAGS = -O3 -DNDEBUG -std=c11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
   INCLUDES = -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/include -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/drbgs -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/crypto -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/algorithms
   OBJECT_DIR = CMakeFiles\DRBG.dir
   OBJECT_FILE_DIR = CMakeFiles\DRBG.dir\crypto
-  TARGET_COMPILE_PDB = CMakeFiles\DRBG.dir\
-  TARGET_PDB = DRBG.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\DRBG.dir
 
 build CMakeFiles/DRBG.dir/crypto/crypto_aes.c.obj: C_COMPILER__DRBG_unscanned_Release C$:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/crypto/crypto_aes.c || cmake_object_order_depends_target_DRBG
   CONFIG = Release
   DEP_FILE = CMakeFiles\DRBG.dir\crypto\crypto_aes.c.obj.d
-  FLAGS = -O3 -DNDEBUG -std=gnu11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
+  FLAGS = -O3 -DNDEBUG -std=c11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
   INCLUDES = -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/include -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/drbgs -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/crypto -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/algorithms
   OBJECT_DIR = CMakeFiles\DRBG.dir
   OBJECT_FILE_DIR = CMakeFiles\DRBG.dir\crypto
-  TARGET_COMPILE_PDB = CMakeFiles\DRBG.dir\
-  TARGET_PDB = DRBG.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\DRBG.dir
 
 build CMakeFiles/DRBG.dir/algorithms/hash_df.c.obj: C_COMPILER__DRBG_unscanned_Release C$:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/algorithms/hash_df.c || cmake_object_order_depends_target_DRBG
   CONFIG = Release
   DEP_FILE = CMakeFiles\DRBG.dir\algorithms\hash_df.c.obj.d
-  FLAGS = -O3 -DNDEBUG -std=gnu11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
+  FLAGS = -O3 -DNDEBUG -std=c11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
   INCLUDES = -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/include -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/drbgs -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/crypto -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/algorithms
   OBJECT_DIR = CMakeFiles\DRBG.dir
   OBJECT_FILE_DIR = CMakeFiles\DRBG.dir\algorithms
-  TARGET_COMPILE_PDB = CMakeFiles\DRBG.dir\
-  TARGET_PDB = DRBG.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\DRBG.dir
 
 build CMakeFiles/DRBG.dir/algorithms/hash_math.c.obj: C_COMPILER__DRBG_unscanned_Release C$:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/algorithms/hash_math.c || cmake_object_order_depends_target_DRBG
   CONFIG = Release
   DEP_FILE = CMakeFiles\DRBG.dir\algorithms\hash_math.c.obj.d
-  FLAGS = -O3 -DNDEBUG -std=gnu11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
+  FLAGS = -O3 -DNDEBUG -std=c11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
   INCLUDES = -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/include -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/drbgs -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/crypto -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/algorithms
   OBJECT_DIR = CMakeFiles\DRBG.dir
   OBJECT_FILE_DIR = CMakeFiles\DRBG.dir\algorithms
-  TARGET_COMPILE_PDB = CMakeFiles\DRBG.dir\
-  TARGET_PDB = DRBG.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\DRBG.dir
 
 build CMakeFiles/DRBG.dir/algorithms/hashgen.c.obj: C_COMPILER__DRBG_unscanned_Release C$:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/algorithms/hashgen.c || cmake_object_order_depends_target_DRBG
   CONFIG = Release
   DEP_FILE = CMakeFiles\DRBG.dir\algorithms\hashgen.c.obj.d
-  FLAGS = -O3 -DNDEBUG -std=gnu11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
+  FLAGS = -O3 -DNDEBUG -std=c11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
   INCLUDES = -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/include -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/drbgs -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/crypto -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/algorithms
   OBJECT_DIR = CMakeFiles\DRBG.dir
   OBJECT_FILE_DIR = CMakeFiles\DRBG.dir\algorithms
-  TARGET_COMPILE_PDB = CMakeFiles\DRBG.dir\
-  TARGET_PDB = DRBG.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\DRBG.dir
+
+build CMakeFiles/DRBG.dir/algorithms/hmac_drbg_update.c.obj: C_COMPILER__DRBG_unscanned_Release C$:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/algorithms/hmac_drbg_update.c || cmake_object_order_depends_target_DRBG
+  CONFIG = Release
+  DEP_FILE = CMakeFiles\DRBG.dir\algorithms\hmac_drbg_update.c.obj.d
+  FLAGS = -O3 -DNDEBUG -std=c11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
+  INCLUDES = -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/include -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/drbgs -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/crypto -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/algorithms
+  OBJECT_DIR = CMakeFiles\DRBG.dir
+  OBJECT_FILE_DIR = CMakeFiles\DRBG.dir\algorithms
   TARGET_SUPPORT_DIR = CMakeFiles\DRBG.dir
 
 build CMakeFiles/DRBG.dir/drbgs/hash_drbg.c.obj: C_COMPILER__DRBG_unscanned_Release C$:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/drbgs/hash_drbg.c || cmake_object_order_depends_target_DRBG
   CONFIG = Release
   DEP_FILE = CMakeFiles\DRBG.dir\drbgs\hash_drbg.c.obj.d
-  FLAGS = -O3 -DNDEBUG -std=gnu11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
+  FLAGS = -O3 -DNDEBUG -std=c11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
   INCLUDES = -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/include -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/drbgs -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/crypto -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/algorithms
   OBJECT_DIR = CMakeFiles\DRBG.dir
   OBJECT_FILE_DIR = CMakeFiles\DRBG.dir\drbgs
-  TARGET_COMPILE_PDB = CMakeFiles\DRBG.dir\
-  TARGET_PDB = DRBG.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\DRBG.dir
+
+build CMakeFiles/DRBG.dir/drbgs/hmac_drbg.c.obj: C_COMPILER__DRBG_unscanned_Release C$:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/drbgs/hmac_drbg.c || cmake_object_order_depends_target_DRBG
+  CONFIG = Release
+  DEP_FILE = CMakeFiles\DRBG.dir\drbgs\hmac_drbg.c.obj.d
+  FLAGS = -O3 -DNDEBUG -std=c11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
+  INCLUDES = -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/include -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/drbgs -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/crypto -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/algorithms
+  OBJECT_DIR = CMakeFiles\DRBG.dir
+  OBJECT_FILE_DIR = CMakeFiles\DRBG.dir\drbgs
   TARGET_SUPPORT_DIR = CMakeFiles\DRBG.dir
 
 build CMakeFiles/DRBG.dir/drbgs/dummy.c.obj: C_COMPILER__DRBG_unscanned_Release C$:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/drbgs/dummy.c || cmake_object_order_depends_target_DRBG
   CONFIG = Release
   DEP_FILE = CMakeFiles\DRBG.dir\drbgs\dummy.c.obj.d
-  FLAGS = -O3 -DNDEBUG -std=gnu11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
+  FLAGS = -O3 -DNDEBUG -std=c11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
   INCLUDES = -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/include -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/drbgs -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/crypto -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/algorithms
   OBJECT_DIR = CMakeFiles\DRBG.dir
   OBJECT_FILE_DIR = CMakeFiles\DRBG.dir\drbgs
-  TARGET_COMPILE_PDB = CMakeFiles\DRBG.dir\
-  TARGET_PDB = DRBG.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\DRBG.dir
 
 
@@ -244,17 +228,16 @@ build CMakeFiles/DRBG.dir/drbgs/dummy.c.obj: C_COMPILER__DRBG_unscanned_Release 
 #############################################
 # Link the executable DRBG.exe
 
-build DRBG.exe: C_EXECUTABLE_LINKER__DRBG_Release CMakeFiles/DRBG.dir/src/main.c.obj CMakeFiles/DRBG.dir/src/benchmark.c.obj CMakeFiles/DRBG.dir/src/timer.c.obj CMakeFiles/DRBG.dir/src/logger.c.obj CMakeFiles/DRBG.dir/src/utils.c.obj CMakeFiles/DRBG.dir/src/csv.c.obj CMakeFiles/DRBG.dir/src/cli.c.obj CMakeFiles/DRBG.dir/src/registry.c.obj CMakeFiles/DRBG.dir/src/entropy.c.obj CMakeFiles/DRBG.dir/crypto/crypto_hash.c.obj CMakeFiles/DRBG.dir/crypto/crypto_hmac.c.obj CMakeFiles/DRBG.dir/crypto/crypto_aes.c.obj CMakeFiles/DRBG.dir/algorithms/hash_df.c.obj CMakeFiles/DRBG.dir/algorithms/hash_math.c.obj CMakeFiles/DRBG.dir/algorithms/hashgen.c.obj CMakeFiles/DRBG.dir/drbgs/hash_drbg.c.obj CMakeFiles/DRBG.dir/drbgs/dummy.c.obj | C$:/msys64/ucrt64/lib/libcrypto.dll.a
+build DRBG.exe: C_EXECUTABLE_LINKER__DRBG_Release CMakeFiles/DRBG.dir/src/main.c.obj CMakeFiles/DRBG.dir/src/benchmark.c.obj CMakeFiles/DRBG.dir/src/timer.c.obj CMakeFiles/DRBG.dir/src/logger.c.obj CMakeFiles/DRBG.dir/src/utils.c.obj CMakeFiles/DRBG.dir/src/csv.c.obj CMakeFiles/DRBG.dir/src/cli.c.obj CMakeFiles/DRBG.dir/src/registry.c.obj CMakeFiles/DRBG.dir/src/entropy.c.obj CMakeFiles/DRBG.dir/crypto/crypto_hash.c.obj CMakeFiles/DRBG.dir/crypto/crypto_hmac.c.obj CMakeFiles/DRBG.dir/crypto/crypto_aes.c.obj CMakeFiles/DRBG.dir/algorithms/hash_df.c.obj CMakeFiles/DRBG.dir/algorithms/hash_math.c.obj CMakeFiles/DRBG.dir/algorithms/hashgen.c.obj CMakeFiles/DRBG.dir/algorithms/hmac_drbg_update.c.obj CMakeFiles/DRBG.dir/drbgs/hash_drbg.c.obj CMakeFiles/DRBG.dir/drbgs/hmac_drbg.c.obj CMakeFiles/DRBG.dir/drbgs/dummy.c.obj | C$:/msys64/ucrt64/lib/libcrypto.dll.a
   CONFIG = Release
   FLAGS = -O3 -DNDEBUG
   LINK_LIBRARIES = C:/msys64/ucrt64/lib/libcrypto.dll.a  -lbcrypt  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\DRBG.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_COMPILE_PDB = CMakeFiles\DRBG.dir\
   TARGET_FILE = DRBG.exe
   TARGET_IMPLIB = libDRBG.dll.a
-  TARGET_PDB = DRBG.pdb
+  TARGET_PDB = DRBG.exe.dbg
   TARGET_SUPPORT_DIR = CMakeFiles\DRBG.dir
 
 # =============================================================================
@@ -269,144 +252,181 @@ build cmake_object_order_depends_target_drbg_tests: phony || .
 build CMakeFiles/drbg_tests.dir/tests/test_main.c.obj: C_COMPILER__drbg_tests_unscanned_Release C$:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/tests/test_main.c || cmake_object_order_depends_target_drbg_tests
   CONFIG = Release
   DEP_FILE = CMakeFiles\drbg_tests.dir\tests\test_main.c.obj.d
-  FLAGS = -O3 -DNDEBUG -std=gnu11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
+  FLAGS = -O3 -DNDEBUG -std=c11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
   INCLUDES = -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/include -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/drbgs -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/crypto -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/algorithms
   OBJECT_DIR = CMakeFiles\drbg_tests.dir
   OBJECT_FILE_DIR = CMakeFiles\drbg_tests.dir\tests
-  TARGET_COMPILE_PDB = CMakeFiles\drbg_tests.dir\
-  TARGET_PDB = drbg_tests.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\drbg_tests.dir
 
 build CMakeFiles/drbg_tests.dir/tests/hash_math_test.c.obj: C_COMPILER__drbg_tests_unscanned_Release C$:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/tests/hash_math_test.c || cmake_object_order_depends_target_drbg_tests
   CONFIG = Release
   DEP_FILE = CMakeFiles\drbg_tests.dir\tests\hash_math_test.c.obj.d
-  FLAGS = -O3 -DNDEBUG -std=gnu11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
+  FLAGS = -O3 -DNDEBUG -std=c11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
   INCLUDES = -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/include -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/drbgs -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/crypto -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/algorithms
   OBJECT_DIR = CMakeFiles\drbg_tests.dir
   OBJECT_FILE_DIR = CMakeFiles\drbg_tests.dir\tests
-  TARGET_COMPILE_PDB = CMakeFiles\drbg_tests.dir\
-  TARGET_PDB = drbg_tests.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\drbg_tests.dir
 
 build CMakeFiles/drbg_tests.dir/tests/hash_df_test.c.obj: C_COMPILER__drbg_tests_unscanned_Release C$:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/tests/hash_df_test.c || cmake_object_order_depends_target_drbg_tests
   CONFIG = Release
   DEP_FILE = CMakeFiles\drbg_tests.dir\tests\hash_df_test.c.obj.d
-  FLAGS = -O3 -DNDEBUG -std=gnu11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
+  FLAGS = -O3 -DNDEBUG -std=c11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
   INCLUDES = -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/include -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/drbgs -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/crypto -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/algorithms
   OBJECT_DIR = CMakeFiles\drbg_tests.dir
   OBJECT_FILE_DIR = CMakeFiles\drbg_tests.dir\tests
-  TARGET_COMPILE_PDB = CMakeFiles\drbg_tests.dir\
-  TARGET_PDB = drbg_tests.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\drbg_tests.dir
 
 build CMakeFiles/drbg_tests.dir/tests/hash_drbg_kat.c.obj: C_COMPILER__drbg_tests_unscanned_Release C$:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/tests/hash_drbg_kat.c || cmake_object_order_depends_target_drbg_tests
   CONFIG = Release
   DEP_FILE = CMakeFiles\drbg_tests.dir\tests\hash_drbg_kat.c.obj.d
-  FLAGS = -O3 -DNDEBUG -std=gnu11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
+  FLAGS = -O3 -DNDEBUG -std=c11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
   INCLUDES = -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/include -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/drbgs -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/crypto -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/algorithms
   OBJECT_DIR = CMakeFiles\drbg_tests.dir
   OBJECT_FILE_DIR = CMakeFiles\drbg_tests.dir\tests
-  TARGET_COMPILE_PDB = CMakeFiles\drbg_tests.dir\
-  TARGET_PDB = drbg_tests.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\drbg_tests.dir
 
 build CMakeFiles/drbg_tests.dir/tests/hash_drbg_nist_kat.c.obj: C_COMPILER__drbg_tests_unscanned_Release C$:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/tests/hash_drbg_nist_kat.c || cmake_object_order_depends_target_drbg_tests
   CONFIG = Release
   DEP_FILE = CMakeFiles\drbg_tests.dir\tests\hash_drbg_nist_kat.c.obj.d
-  FLAGS = -O3 -DNDEBUG -std=gnu11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
+  FLAGS = -O3 -DNDEBUG -std=c11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
   INCLUDES = -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/include -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/drbgs -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/crypto -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/algorithms
   OBJECT_DIR = CMakeFiles\drbg_tests.dir
   OBJECT_FILE_DIR = CMakeFiles\drbg_tests.dir\tests
-  TARGET_COMPILE_PDB = CMakeFiles\drbg_tests.dir\
-  TARGET_PDB = drbg_tests.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\drbg_tests.dir
 
 build CMakeFiles/drbg_tests.dir/tests/hash_drbg_nist_extended_kat.c.obj: C_COMPILER__drbg_tests_unscanned_Release C$:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/tests/hash_drbg_nist_extended_kat.c || cmake_object_order_depends_target_drbg_tests
   CONFIG = Release
   DEP_FILE = CMakeFiles\drbg_tests.dir\tests\hash_drbg_nist_extended_kat.c.obj.d
-  FLAGS = -O3 -DNDEBUG -std=gnu11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
+  FLAGS = -O3 -DNDEBUG -std=c11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
   INCLUDES = -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/include -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/drbgs -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/crypto -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/algorithms
   OBJECT_DIR = CMakeFiles\drbg_tests.dir
   OBJECT_FILE_DIR = CMakeFiles\drbg_tests.dir\tests
-  TARGET_COMPILE_PDB = CMakeFiles\drbg_tests.dir\
-  TARGET_PDB = drbg_tests.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\drbg_tests.dir
 
 build CMakeFiles/drbg_tests.dir/tests/hash_drbg_boundary_test.c.obj: C_COMPILER__drbg_tests_unscanned_Release C$:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/tests/hash_drbg_boundary_test.c || cmake_object_order_depends_target_drbg_tests
   CONFIG = Release
   DEP_FILE = CMakeFiles\drbg_tests.dir\tests\hash_drbg_boundary_test.c.obj.d
-  FLAGS = -O3 -DNDEBUG -std=gnu11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
+  FLAGS = -O3 -DNDEBUG -std=c11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
   INCLUDES = -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/include -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/drbgs -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/crypto -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/algorithms
   OBJECT_DIR = CMakeFiles\drbg_tests.dir
   OBJECT_FILE_DIR = CMakeFiles\drbg_tests.dir\tests
-  TARGET_COMPILE_PDB = CMakeFiles\drbg_tests.dir\
-  TARGET_PDB = drbg_tests.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\drbg_tests.dir
+
+build CMakeFiles/drbg_tests.dir/tests/hmac_drbg_update_test.c.obj: C_COMPILER__drbg_tests_unscanned_Release C$:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/tests/hmac_drbg_update_test.c || cmake_object_order_depends_target_drbg_tests
+  CONFIG = Release
+  DEP_FILE = CMakeFiles\drbg_tests.dir\tests\hmac_drbg_update_test.c.obj.d
+  FLAGS = -O3 -DNDEBUG -std=c11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
+  INCLUDES = -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/include -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/drbgs -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/crypto -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/algorithms
+  OBJECT_DIR = CMakeFiles\drbg_tests.dir
+  OBJECT_FILE_DIR = CMakeFiles\drbg_tests.dir\tests
+  TARGET_SUPPORT_DIR = CMakeFiles\drbg_tests.dir
+
+build CMakeFiles/drbg_tests.dir/tests/hmac_drbg_boundary_test.c.obj: C_COMPILER__drbg_tests_unscanned_Release C$:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/tests/hmac_drbg_boundary_test.c || cmake_object_order_depends_target_drbg_tests
+  CONFIG = Release
+  DEP_FILE = CMakeFiles\drbg_tests.dir\tests\hmac_drbg_boundary_test.c.obj.d
+  FLAGS = -O3 -DNDEBUG -std=c11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
+  INCLUDES = -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/include -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/drbgs -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/crypto -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/algorithms
+  OBJECT_DIR = CMakeFiles\drbg_tests.dir
+  OBJECT_FILE_DIR = CMakeFiles\drbg_tests.dir\tests
+  TARGET_SUPPORT_DIR = CMakeFiles\drbg_tests.dir
+
+build CMakeFiles/drbg_tests.dir/tests/hmac_drbg_nist_kat.c.obj: C_COMPILER__drbg_tests_unscanned_Release C$:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/tests/hmac_drbg_nist_kat.c || cmake_object_order_depends_target_drbg_tests
+  CONFIG = Release
+  DEP_FILE = CMakeFiles\drbg_tests.dir\tests\hmac_drbg_nist_kat.c.obj.d
+  FLAGS = -O3 -DNDEBUG -std=c11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
+  INCLUDES = -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/include -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/drbgs -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/crypto -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/algorithms
+  OBJECT_DIR = CMakeFiles\drbg_tests.dir
+  OBJECT_FILE_DIR = CMakeFiles\drbg_tests.dir\tests
+  TARGET_SUPPORT_DIR = CMakeFiles\drbg_tests.dir
+
+build CMakeFiles/drbg_tests.dir/tests/hmac_drbg_nist_extended_kat.c.obj: C_COMPILER__drbg_tests_unscanned_Release C$:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/tests/hmac_drbg_nist_extended_kat.c || cmake_object_order_depends_target_drbg_tests
+  CONFIG = Release
+  DEP_FILE = CMakeFiles\drbg_tests.dir\tests\hmac_drbg_nist_extended_kat.c.obj.d
+  FLAGS = -O3 -DNDEBUG -std=c11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
+  INCLUDES = -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/include -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/drbgs -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/crypto -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/algorithms
+  OBJECT_DIR = CMakeFiles\drbg_tests.dir
+  OBJECT_FILE_DIR = CMakeFiles\drbg_tests.dir\tests
   TARGET_SUPPORT_DIR = CMakeFiles\drbg_tests.dir
 
 build CMakeFiles/drbg_tests.dir/drbgs/hash_drbg.c.obj: C_COMPILER__drbg_tests_unscanned_Release C$:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/drbgs/hash_drbg.c || cmake_object_order_depends_target_drbg_tests
   CONFIG = Release
   DEP_FILE = CMakeFiles\drbg_tests.dir\drbgs\hash_drbg.c.obj.d
-  FLAGS = -O3 -DNDEBUG -std=gnu11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
+  FLAGS = -O3 -DNDEBUG -std=c11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
   INCLUDES = -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/include -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/drbgs -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/crypto -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/algorithms
   OBJECT_DIR = CMakeFiles\drbg_tests.dir
   OBJECT_FILE_DIR = CMakeFiles\drbg_tests.dir\drbgs
-  TARGET_COMPILE_PDB = CMakeFiles\drbg_tests.dir\
-  TARGET_PDB = drbg_tests.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\drbg_tests.dir
 
 build CMakeFiles/drbg_tests.dir/algorithms/hash_df.c.obj: C_COMPILER__drbg_tests_unscanned_Release C$:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/algorithms/hash_df.c || cmake_object_order_depends_target_drbg_tests
   CONFIG = Release
   DEP_FILE = CMakeFiles\drbg_tests.dir\algorithms\hash_df.c.obj.d
-  FLAGS = -O3 -DNDEBUG -std=gnu11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
+  FLAGS = -O3 -DNDEBUG -std=c11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
   INCLUDES = -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/include -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/drbgs -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/crypto -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/algorithms
   OBJECT_DIR = CMakeFiles\drbg_tests.dir
   OBJECT_FILE_DIR = CMakeFiles\drbg_tests.dir\algorithms
-  TARGET_COMPILE_PDB = CMakeFiles\drbg_tests.dir\
-  TARGET_PDB = drbg_tests.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\drbg_tests.dir
 
 build CMakeFiles/drbg_tests.dir/algorithms/hash_math.c.obj: C_COMPILER__drbg_tests_unscanned_Release C$:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/algorithms/hash_math.c || cmake_object_order_depends_target_drbg_tests
   CONFIG = Release
   DEP_FILE = CMakeFiles\drbg_tests.dir\algorithms\hash_math.c.obj.d
-  FLAGS = -O3 -DNDEBUG -std=gnu11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
+  FLAGS = -O3 -DNDEBUG -std=c11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
   INCLUDES = -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/include -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/drbgs -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/crypto -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/algorithms
   OBJECT_DIR = CMakeFiles\drbg_tests.dir
   OBJECT_FILE_DIR = CMakeFiles\drbg_tests.dir\algorithms
-  TARGET_COMPILE_PDB = CMakeFiles\drbg_tests.dir\
-  TARGET_PDB = drbg_tests.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\drbg_tests.dir
 
 build CMakeFiles/drbg_tests.dir/algorithms/hashgen.c.obj: C_COMPILER__drbg_tests_unscanned_Release C$:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/algorithms/hashgen.c || cmake_object_order_depends_target_drbg_tests
   CONFIG = Release
   DEP_FILE = CMakeFiles\drbg_tests.dir\algorithms\hashgen.c.obj.d
-  FLAGS = -O3 -DNDEBUG -std=gnu11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
+  FLAGS = -O3 -DNDEBUG -std=c11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
   INCLUDES = -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/include -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/drbgs -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/crypto -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/algorithms
   OBJECT_DIR = CMakeFiles\drbg_tests.dir
   OBJECT_FILE_DIR = CMakeFiles\drbg_tests.dir\algorithms
-  TARGET_COMPILE_PDB = CMakeFiles\drbg_tests.dir\
-  TARGET_PDB = drbg_tests.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\drbg_tests.dir
 
 build CMakeFiles/drbg_tests.dir/crypto/crypto_hash.c.obj: C_COMPILER__drbg_tests_unscanned_Release C$:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/crypto/crypto_hash.c || cmake_object_order_depends_target_drbg_tests
   CONFIG = Release
   DEP_FILE = CMakeFiles\drbg_tests.dir\crypto\crypto_hash.c.obj.d
-  FLAGS = -O3 -DNDEBUG -std=gnu11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
+  FLAGS = -O3 -DNDEBUG -std=c11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
   INCLUDES = -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/include -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/drbgs -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/crypto -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/algorithms
   OBJECT_DIR = CMakeFiles\drbg_tests.dir
   OBJECT_FILE_DIR = CMakeFiles\drbg_tests.dir\crypto
-  TARGET_COMPILE_PDB = CMakeFiles\drbg_tests.dir\
-  TARGET_PDB = drbg_tests.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\drbg_tests.dir
+
+build CMakeFiles/drbg_tests.dir/drbgs/hmac_drbg.c.obj: C_COMPILER__drbg_tests_unscanned_Release C$:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/drbgs/hmac_drbg.c || cmake_object_order_depends_target_drbg_tests
+  CONFIG = Release
+  DEP_FILE = CMakeFiles\drbg_tests.dir\drbgs\hmac_drbg.c.obj.d
+  FLAGS = -O3 -DNDEBUG -std=c11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
+  INCLUDES = -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/include -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/drbgs -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/crypto -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/algorithms
+  OBJECT_DIR = CMakeFiles\drbg_tests.dir
+  OBJECT_FILE_DIR = CMakeFiles\drbg_tests.dir\drbgs
+  TARGET_SUPPORT_DIR = CMakeFiles\drbg_tests.dir
+
+build CMakeFiles/drbg_tests.dir/algorithms/hmac_drbg_update.c.obj: C_COMPILER__drbg_tests_unscanned_Release C$:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/algorithms/hmac_drbg_update.c || cmake_object_order_depends_target_drbg_tests
+  CONFIG = Release
+  DEP_FILE = CMakeFiles\drbg_tests.dir\algorithms\hmac_drbg_update.c.obj.d
+  FLAGS = -O3 -DNDEBUG -std=c11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
+  INCLUDES = -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/include -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/drbgs -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/crypto -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/algorithms
+  OBJECT_DIR = CMakeFiles\drbg_tests.dir
+  OBJECT_FILE_DIR = CMakeFiles\drbg_tests.dir\algorithms
+  TARGET_SUPPORT_DIR = CMakeFiles\drbg_tests.dir
+
+build CMakeFiles/drbg_tests.dir/crypto/crypto_hmac.c.obj: C_COMPILER__drbg_tests_unscanned_Release C$:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/crypto/crypto_hmac.c || cmake_object_order_depends_target_drbg_tests
+  CONFIG = Release
+  DEP_FILE = CMakeFiles\drbg_tests.dir\crypto\crypto_hmac.c.obj.d
+  FLAGS = -O3 -DNDEBUG -std=c11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
+  INCLUDES = -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/include -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/drbgs -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/crypto -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/algorithms
+  OBJECT_DIR = CMakeFiles\drbg_tests.dir
+  OBJECT_FILE_DIR = CMakeFiles\drbg_tests.dir\crypto
   TARGET_SUPPORT_DIR = CMakeFiles\drbg_tests.dir
 
 build CMakeFiles/drbg_tests.dir/src/utils.c.obj: C_COMPILER__drbg_tests_unscanned_Release C$:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/src/utils.c || cmake_object_order_depends_target_drbg_tests
   CONFIG = Release
   DEP_FILE = CMakeFiles\drbg_tests.dir\src\utils.c.obj.d
-  FLAGS = -O3 -DNDEBUG -std=gnu11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
+  FLAGS = -O3 -DNDEBUG -std=c11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
   INCLUDES = -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/include -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/drbgs -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/crypto -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/algorithms
   OBJECT_DIR = CMakeFiles\drbg_tests.dir
   OBJECT_FILE_DIR = CMakeFiles\drbg_tests.dir\src
-  TARGET_COMPILE_PDB = CMakeFiles\drbg_tests.dir\
-  TARGET_PDB = drbg_tests.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\drbg_tests.dir
 
 
@@ -417,17 +437,16 @@ build CMakeFiles/drbg_tests.dir/src/utils.c.obj: C_COMPILER__drbg_tests_unscanne
 #############################################
 # Link the executable drbg_tests.exe
 
-build drbg_tests.exe: C_EXECUTABLE_LINKER__drbg_tests_Release CMakeFiles/drbg_tests.dir/tests/test_main.c.obj CMakeFiles/drbg_tests.dir/tests/hash_math_test.c.obj CMakeFiles/drbg_tests.dir/tests/hash_df_test.c.obj CMakeFiles/drbg_tests.dir/tests/hash_drbg_kat.c.obj CMakeFiles/drbg_tests.dir/tests/hash_drbg_nist_kat.c.obj CMakeFiles/drbg_tests.dir/tests/hash_drbg_nist_extended_kat.c.obj CMakeFiles/drbg_tests.dir/tests/hash_drbg_boundary_test.c.obj CMakeFiles/drbg_tests.dir/drbgs/hash_drbg.c.obj CMakeFiles/drbg_tests.dir/algorithms/hash_df.c.obj CMakeFiles/drbg_tests.dir/algorithms/hash_math.c.obj CMakeFiles/drbg_tests.dir/algorithms/hashgen.c.obj CMakeFiles/drbg_tests.dir/crypto/crypto_hash.c.obj CMakeFiles/drbg_tests.dir/src/utils.c.obj | C$:/msys64/ucrt64/lib/libcrypto.dll.a
+build drbg_tests.exe: C_EXECUTABLE_LINKER__drbg_tests_Release CMakeFiles/drbg_tests.dir/tests/test_main.c.obj CMakeFiles/drbg_tests.dir/tests/hash_math_test.c.obj CMakeFiles/drbg_tests.dir/tests/hash_df_test.c.obj CMakeFiles/drbg_tests.dir/tests/hash_drbg_kat.c.obj CMakeFiles/drbg_tests.dir/tests/hash_drbg_nist_kat.c.obj CMakeFiles/drbg_tests.dir/tests/hash_drbg_nist_extended_kat.c.obj CMakeFiles/drbg_tests.dir/tests/hash_drbg_boundary_test.c.obj CMakeFiles/drbg_tests.dir/tests/hmac_drbg_update_test.c.obj CMakeFiles/drbg_tests.dir/tests/hmac_drbg_boundary_test.c.obj CMakeFiles/drbg_tests.dir/tests/hmac_drbg_nist_kat.c.obj CMakeFiles/drbg_tests.dir/tests/hmac_drbg_nist_extended_kat.c.obj CMakeFiles/drbg_tests.dir/drbgs/hash_drbg.c.obj CMakeFiles/drbg_tests.dir/algorithms/hash_df.c.obj CMakeFiles/drbg_tests.dir/algorithms/hash_math.c.obj CMakeFiles/drbg_tests.dir/algorithms/hashgen.c.obj CMakeFiles/drbg_tests.dir/crypto/crypto_hash.c.obj CMakeFiles/drbg_tests.dir/drbgs/hmac_drbg.c.obj CMakeFiles/drbg_tests.dir/algorithms/hmac_drbg_update.c.obj CMakeFiles/drbg_tests.dir/crypto/crypto_hmac.c.obj CMakeFiles/drbg_tests.dir/src/utils.c.obj | C$:/msys64/ucrt64/lib/libcrypto.dll.a
   CONFIG = Release
   FLAGS = -O3 -DNDEBUG
-  LINK_LIBRARIES = C:/msys64/ucrt64/lib/libcrypto.dll.a  -lbcrypt  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  LINK_LIBRARIES = C:/msys64/ucrt64/lib/libcrypto.dll.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\drbg_tests.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_COMPILE_PDB = CMakeFiles\drbg_tests.dir\
   TARGET_FILE = drbg_tests.exe
   TARGET_IMPLIB = libdrbg_tests.dll.a
-  TARGET_PDB = drbg_tests.pdb
+  TARGET_PDB = drbg_tests.exe.dbg
   TARGET_SUPPORT_DIR = CMakeFiles\drbg_tests.dir
 
 # =============================================================================
@@ -442,67 +461,64 @@ build cmake_object_order_depends_target_drbg_rsp_runner: phony || .
 build CMakeFiles/drbg_rsp_runner.dir/tests/nist_rsp_runner.c.obj: C_COMPILER__drbg_rsp_runner_unscanned_Release C$:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/tests/nist_rsp_runner.c || cmake_object_order_depends_target_drbg_rsp_runner
   CONFIG = Release
   DEP_FILE = CMakeFiles\drbg_rsp_runner.dir\tests\nist_rsp_runner.c.obj.d
-  FLAGS = -O3 -DNDEBUG -std=gnu11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
+  FLAGS = -O3 -DNDEBUG -std=c11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
   INCLUDES = -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/include -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/drbgs -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/crypto -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/algorithms
   OBJECT_DIR = CMakeFiles\drbg_rsp_runner.dir
   OBJECT_FILE_DIR = CMakeFiles\drbg_rsp_runner.dir\tests
-  TARGET_COMPILE_PDB = CMakeFiles\drbg_rsp_runner.dir\
-  TARGET_PDB = drbg_rsp_runner.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\drbg_rsp_runner.dir
 
 build CMakeFiles/drbg_rsp_runner.dir/drbgs/hash_drbg.c.obj: C_COMPILER__drbg_rsp_runner_unscanned_Release C$:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/drbgs/hash_drbg.c || cmake_object_order_depends_target_drbg_rsp_runner
   CONFIG = Release
   DEP_FILE = CMakeFiles\drbg_rsp_runner.dir\drbgs\hash_drbg.c.obj.d
-  FLAGS = -O3 -DNDEBUG -std=gnu11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
+  FLAGS = -O3 -DNDEBUG -std=c11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
   INCLUDES = -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/include -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/drbgs -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/crypto -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/algorithms
   OBJECT_DIR = CMakeFiles\drbg_rsp_runner.dir
   OBJECT_FILE_DIR = CMakeFiles\drbg_rsp_runner.dir\drbgs
-  TARGET_COMPILE_PDB = CMakeFiles\drbg_rsp_runner.dir\
-  TARGET_PDB = drbg_rsp_runner.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\drbg_rsp_runner.dir
 
 build CMakeFiles/drbg_rsp_runner.dir/algorithms/hash_df.c.obj: C_COMPILER__drbg_rsp_runner_unscanned_Release C$:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/algorithms/hash_df.c || cmake_object_order_depends_target_drbg_rsp_runner
   CONFIG = Release
   DEP_FILE = CMakeFiles\drbg_rsp_runner.dir\algorithms\hash_df.c.obj.d
-  FLAGS = -O3 -DNDEBUG -std=gnu11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
+  FLAGS = -O3 -DNDEBUG -std=c11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
   INCLUDES = -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/include -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/drbgs -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/crypto -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/algorithms
   OBJECT_DIR = CMakeFiles\drbg_rsp_runner.dir
   OBJECT_FILE_DIR = CMakeFiles\drbg_rsp_runner.dir\algorithms
-  TARGET_COMPILE_PDB = CMakeFiles\drbg_rsp_runner.dir\
-  TARGET_PDB = drbg_rsp_runner.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\drbg_rsp_runner.dir
 
 build CMakeFiles/drbg_rsp_runner.dir/algorithms/hash_math.c.obj: C_COMPILER__drbg_rsp_runner_unscanned_Release C$:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/algorithms/hash_math.c || cmake_object_order_depends_target_drbg_rsp_runner
   CONFIG = Release
   DEP_FILE = CMakeFiles\drbg_rsp_runner.dir\algorithms\hash_math.c.obj.d
-  FLAGS = -O3 -DNDEBUG -std=gnu11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
+  FLAGS = -O3 -DNDEBUG -std=c11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
   INCLUDES = -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/include -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/drbgs -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/crypto -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/algorithms
   OBJECT_DIR = CMakeFiles\drbg_rsp_runner.dir
   OBJECT_FILE_DIR = CMakeFiles\drbg_rsp_runner.dir\algorithms
-  TARGET_COMPILE_PDB = CMakeFiles\drbg_rsp_runner.dir\
-  TARGET_PDB = drbg_rsp_runner.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\drbg_rsp_runner.dir
 
 build CMakeFiles/drbg_rsp_runner.dir/algorithms/hashgen.c.obj: C_COMPILER__drbg_rsp_runner_unscanned_Release C$:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/algorithms/hashgen.c || cmake_object_order_depends_target_drbg_rsp_runner
   CONFIG = Release
   DEP_FILE = CMakeFiles\drbg_rsp_runner.dir\algorithms\hashgen.c.obj.d
-  FLAGS = -O3 -DNDEBUG -std=gnu11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
+  FLAGS = -O3 -DNDEBUG -std=c11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
   INCLUDES = -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/include -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/drbgs -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/crypto -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/algorithms
   OBJECT_DIR = CMakeFiles\drbg_rsp_runner.dir
   OBJECT_FILE_DIR = CMakeFiles\drbg_rsp_runner.dir\algorithms
-  TARGET_COMPILE_PDB = CMakeFiles\drbg_rsp_runner.dir\
-  TARGET_PDB = drbg_rsp_runner.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\drbg_rsp_runner.dir
 
 build CMakeFiles/drbg_rsp_runner.dir/crypto/crypto_hash.c.obj: C_COMPILER__drbg_rsp_runner_unscanned_Release C$:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/crypto/crypto_hash.c || cmake_object_order_depends_target_drbg_rsp_runner
   CONFIG = Release
   DEP_FILE = CMakeFiles\drbg_rsp_runner.dir\crypto\crypto_hash.c.obj.d
-  FLAGS = -O3 -DNDEBUG -std=gnu11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
+  FLAGS = -O3 -DNDEBUG -std=c11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
   INCLUDES = -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/include -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/drbgs -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/crypto -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/algorithms
   OBJECT_DIR = CMakeFiles\drbg_rsp_runner.dir
   OBJECT_FILE_DIR = CMakeFiles\drbg_rsp_runner.dir\crypto
-  TARGET_COMPILE_PDB = CMakeFiles\drbg_rsp_runner.dir\
-  TARGET_PDB = drbg_rsp_runner.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\drbg_rsp_runner.dir
+
+build CMakeFiles/drbg_rsp_runner.dir/src/utils.c.obj: C_COMPILER__drbg_rsp_runner_unscanned_Release C$:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/src/utils.c || cmake_object_order_depends_target_drbg_rsp_runner
+  CONFIG = Release
+  DEP_FILE = CMakeFiles\drbg_rsp_runner.dir\src\utils.c.obj.d
+  FLAGS = -O3 -DNDEBUG -std=c11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
+  INCLUDES = -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/include -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/drbgs -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/crypto -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/algorithms
+  OBJECT_DIR = CMakeFiles\drbg_rsp_runner.dir
+  OBJECT_FILE_DIR = CMakeFiles\drbg_rsp_runner.dir\src
   TARGET_SUPPORT_DIR = CMakeFiles\drbg_rsp_runner.dir
 
 
@@ -513,18 +529,91 @@ build CMakeFiles/drbg_rsp_runner.dir/crypto/crypto_hash.c.obj: C_COMPILER__drbg_
 #############################################
 # Link the executable drbg_rsp_runner.exe
 
-build drbg_rsp_runner.exe: C_EXECUTABLE_LINKER__drbg_rsp_runner_Release CMakeFiles/drbg_rsp_runner.dir/tests/nist_rsp_runner.c.obj CMakeFiles/drbg_rsp_runner.dir/drbgs/hash_drbg.c.obj CMakeFiles/drbg_rsp_runner.dir/algorithms/hash_df.c.obj CMakeFiles/drbg_rsp_runner.dir/algorithms/hash_math.c.obj CMakeFiles/drbg_rsp_runner.dir/algorithms/hashgen.c.obj CMakeFiles/drbg_rsp_runner.dir/crypto/crypto_hash.c.obj | C$:/msys64/ucrt64/lib/libcrypto.dll.a
+build drbg_rsp_runner.exe: C_EXECUTABLE_LINKER__drbg_rsp_runner_Release CMakeFiles/drbg_rsp_runner.dir/tests/nist_rsp_runner.c.obj CMakeFiles/drbg_rsp_runner.dir/drbgs/hash_drbg.c.obj CMakeFiles/drbg_rsp_runner.dir/algorithms/hash_df.c.obj CMakeFiles/drbg_rsp_runner.dir/algorithms/hash_math.c.obj CMakeFiles/drbg_rsp_runner.dir/algorithms/hashgen.c.obj CMakeFiles/drbg_rsp_runner.dir/crypto/crypto_hash.c.obj CMakeFiles/drbg_rsp_runner.dir/src/utils.c.obj | C$:/msys64/ucrt64/lib/libcrypto.dll.a
   CONFIG = Release
   FLAGS = -O3 -DNDEBUG
   LINK_LIBRARIES = C:/msys64/ucrt64/lib/libcrypto.dll.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\drbg_rsp_runner.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_COMPILE_PDB = CMakeFiles\drbg_rsp_runner.dir\
   TARGET_FILE = drbg_rsp_runner.exe
   TARGET_IMPLIB = libdrbg_rsp_runner.dll.a
-  TARGET_PDB = drbg_rsp_runner.pdb
+  TARGET_PDB = drbg_rsp_runner.exe.dbg
   TARGET_SUPPORT_DIR = CMakeFiles\drbg_rsp_runner.dir
+
+# =============================================================================
+# Object build statements for EXECUTABLE target hmac_drbg_rsp_runner
+
+
+#############################################
+# Order-only phony target for hmac_drbg_rsp_runner
+
+build cmake_object_order_depends_target_hmac_drbg_rsp_runner: phony || .
+
+build CMakeFiles/hmac_drbg_rsp_runner.dir/tests/nist_hmac_rsp_runner.c.obj: C_COMPILER__hmac_drbg_rsp_runner_unscanned_Release C$:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/tests/nist_hmac_rsp_runner.c || cmake_object_order_depends_target_hmac_drbg_rsp_runner
+  CONFIG = Release
+  DEP_FILE = CMakeFiles\hmac_drbg_rsp_runner.dir\tests\nist_hmac_rsp_runner.c.obj.d
+  FLAGS = -O3 -DNDEBUG -std=c11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
+  INCLUDES = -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/include -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/drbgs -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/crypto -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/algorithms
+  OBJECT_DIR = CMakeFiles\hmac_drbg_rsp_runner.dir
+  OBJECT_FILE_DIR = CMakeFiles\hmac_drbg_rsp_runner.dir\tests
+  TARGET_SUPPORT_DIR = CMakeFiles\hmac_drbg_rsp_runner.dir
+
+build CMakeFiles/hmac_drbg_rsp_runner.dir/drbgs/hmac_drbg.c.obj: C_COMPILER__hmac_drbg_rsp_runner_unscanned_Release C$:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/drbgs/hmac_drbg.c || cmake_object_order_depends_target_hmac_drbg_rsp_runner
+  CONFIG = Release
+  DEP_FILE = CMakeFiles\hmac_drbg_rsp_runner.dir\drbgs\hmac_drbg.c.obj.d
+  FLAGS = -O3 -DNDEBUG -std=c11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
+  INCLUDES = -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/include -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/drbgs -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/crypto -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/algorithms
+  OBJECT_DIR = CMakeFiles\hmac_drbg_rsp_runner.dir
+  OBJECT_FILE_DIR = CMakeFiles\hmac_drbg_rsp_runner.dir\drbgs
+  TARGET_SUPPORT_DIR = CMakeFiles\hmac_drbg_rsp_runner.dir
+
+build CMakeFiles/hmac_drbg_rsp_runner.dir/algorithms/hmac_drbg_update.c.obj: C_COMPILER__hmac_drbg_rsp_runner_unscanned_Release C$:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/algorithms/hmac_drbg_update.c || cmake_object_order_depends_target_hmac_drbg_rsp_runner
+  CONFIG = Release
+  DEP_FILE = CMakeFiles\hmac_drbg_rsp_runner.dir\algorithms\hmac_drbg_update.c.obj.d
+  FLAGS = -O3 -DNDEBUG -std=c11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
+  INCLUDES = -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/include -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/drbgs -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/crypto -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/algorithms
+  OBJECT_DIR = CMakeFiles\hmac_drbg_rsp_runner.dir
+  OBJECT_FILE_DIR = CMakeFiles\hmac_drbg_rsp_runner.dir\algorithms
+  TARGET_SUPPORT_DIR = CMakeFiles\hmac_drbg_rsp_runner.dir
+
+build CMakeFiles/hmac_drbg_rsp_runner.dir/crypto/crypto_hmac.c.obj: C_COMPILER__hmac_drbg_rsp_runner_unscanned_Release C$:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/crypto/crypto_hmac.c || cmake_object_order_depends_target_hmac_drbg_rsp_runner
+  CONFIG = Release
+  DEP_FILE = CMakeFiles\hmac_drbg_rsp_runner.dir\crypto\crypto_hmac.c.obj.d
+  FLAGS = -O3 -DNDEBUG -std=c11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
+  INCLUDES = -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/include -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/drbgs -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/crypto -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/algorithms
+  OBJECT_DIR = CMakeFiles\hmac_drbg_rsp_runner.dir
+  OBJECT_FILE_DIR = CMakeFiles\hmac_drbg_rsp_runner.dir\crypto
+  TARGET_SUPPORT_DIR = CMakeFiles\hmac_drbg_rsp_runner.dir
+
+build CMakeFiles/hmac_drbg_rsp_runner.dir/src/utils.c.obj: C_COMPILER__hmac_drbg_rsp_runner_unscanned_Release C$:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/src/utils.c || cmake_object_order_depends_target_hmac_drbg_rsp_runner
+  CONFIG = Release
+  DEP_FILE = CMakeFiles\hmac_drbg_rsp_runner.dir\src\utils.c.obj.d
+  FLAGS = -O3 -DNDEBUG -std=c11 -Wall -Wextra -Wpedantic -Wformat=2 -Wshadow -Wconversion -Wsign-conversion -Wstrict-prototypes -Wundef -Wcast-qual
+  INCLUDES = -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/include -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/drbgs -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/crypto -IC:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/algorithms
+  OBJECT_DIR = CMakeFiles\hmac_drbg_rsp_runner.dir
+  OBJECT_FILE_DIR = CMakeFiles\hmac_drbg_rsp_runner.dir\src
+  TARGET_SUPPORT_DIR = CMakeFiles\hmac_drbg_rsp_runner.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target hmac_drbg_rsp_runner
+
+
+#############################################
+# Link the executable hmac_drbg_rsp_runner.exe
+
+build hmac_drbg_rsp_runner.exe: C_EXECUTABLE_LINKER__hmac_drbg_rsp_runner_Release CMakeFiles/hmac_drbg_rsp_runner.dir/tests/nist_hmac_rsp_runner.c.obj CMakeFiles/hmac_drbg_rsp_runner.dir/drbgs/hmac_drbg.c.obj CMakeFiles/hmac_drbg_rsp_runner.dir/algorithms/hmac_drbg_update.c.obj CMakeFiles/hmac_drbg_rsp_runner.dir/crypto/crypto_hmac.c.obj CMakeFiles/hmac_drbg_rsp_runner.dir/src/utils.c.obj | C$:/msys64/ucrt64/lib/libcrypto.dll.a
+  CONFIG = Release
+  FLAGS = -O3 -DNDEBUG
+  LINK_LIBRARIES = C:/msys64/ucrt64/lib/libcrypto.dll.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\hmac_drbg_rsp_runner.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = hmac_drbg_rsp_runner.exe
+  TARGET_IMPLIB = libhmac_drbg_rsp_runner.dll.a
+  TARGET_PDB = hmac_drbg_rsp_runner.exe.dbg
+  TARGET_SUPPORT_DIR = CMakeFiles\hmac_drbg_rsp_runner.dir
 
 
 #############################################
@@ -570,6 +659,8 @@ build drbg_rsp_runner: phony drbg_rsp_runner.exe
 
 build drbg_tests: phony drbg_tests.exe
 
+build hmac_drbg_rsp_runner: phony hmac_drbg_rsp_runner.exe
+
 # =============================================================================
 # Folder targets.
 
@@ -578,7 +669,7 @@ build drbg_tests: phony drbg_tests.exe
 #############################################
 # Folder: C:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/build-release
 
-build all: phony DRBG.exe drbg_tests.exe drbg_rsp_runner.exe
+build all: phony DRBG.exe drbg_tests.exe drbg_rsp_runner.exe hmac_drbg_rsp_runner.exe
 
 # =============================================================================
 # Built-in targets
@@ -587,14 +678,14 @@ build all: phony DRBG.exe drbg_tests.exe drbg_rsp_runner.exe
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja C$:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/build-release/cmake_install.cmake C$:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/build-release/CTestTestfile.cmake: RERUN_CMAKE | C$:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/CMakeLists.txt C$:/msys64/ucrt64/share/cmake/Modules/CMakeCCompiler.cmake.in C$:/msys64/ucrt64/share/cmake/Modules/CMakeCCompilerABI.c C$:/msys64/ucrt64/share/cmake/Modules/CMakeCInformation.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeCommonLanguageInclude.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeCompilerIdDetection.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeDetermineCCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeDetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeDetermineCompilerABI.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeDetermineCompilerId.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeDetermineCompilerSupport.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeDetermineRCCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeDetermineSystem.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeFindBinUtils.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeGenericSystem.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeInitializeConfigs.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeLanguageInformation.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeNinjaFindMake.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeParseImplicitIncludeInfo.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeParseImplicitLinkInfo.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeParseLibraryArchitecture.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeRCCompiler.cmake.in C$:/msys64/ucrt64/share/cmake/Modules/CMakeRCInformation.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeSystem.cmake.in C$:/msys64/ucrt64/share/cmake/Modules/CMakeSystemSpecificInformation.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeTestCCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeTestCompilerCommon.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeTestRCCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/ADSP-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/ARMCC-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/ARMClang-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/AppleClang-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/Borland-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/Bruce-C-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/Clang-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/Clang-DetermineCompilerInternal.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/Compaq-C-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/Cray-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/CrayClang-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/Diab-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/Embarcadero-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/Fujitsu-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/GHS-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/GNU-C-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/GNU-C.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/GNU-FindBinUtils.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/GNU.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/HP-C-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/IAR-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/Intel-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/LCC-C-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/MSVC-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/NVHPC-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/NVIDIA-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/OrangeC-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/PGI-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/PathScale-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/Renesas-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/SCO-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/SDCC-C-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/SunPro-C-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/TI-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/TIClang-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/Tasking-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/Watcom-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/XL-C-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/XLClang-C-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/zOS-C-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/FindOpenSSL.cmake C$:/msys64/ucrt64/share/cmake/Modules/FindPackageHandleStandardArgs.cmake C$:/msys64/ucrt64/share/cmake/Modules/FindPackageMessage.cmake C$:/msys64/ucrt64/share/cmake/Modules/Internal/CMakeCLinkerInformation.cmake C$:/msys64/ucrt64/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake C$:/msys64/ucrt64/share/cmake/Modules/Internal/CMakeDetermineLinkerId.cmake C$:/msys64/ucrt64/share/cmake/Modules/Internal/CMakeInspectCLinker.cmake C$:/msys64/ucrt64/share/cmake/Modules/Internal/FeatureTesting.cmake C$:/msys64/ucrt64/share/cmake/Modules/Linker/GNU-C.cmake C$:/msys64/ucrt64/share/cmake/Modules/Linker/GNU.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Linker/GNU.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Linker/Windows-GNU-C.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Linker/Windows-GNU.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-GNU-C.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-GNU.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-Initialize.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-windres.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/WindowsPaths.cmake CMakeCache.txt CMakeFiles/4.3.4/CMakeCCompiler.cmake CMakeFiles/4.3.4/CMakeRCCompiler.cmake CMakeFiles/4.3.4/CMakeSystem.cmake
+build build.ninja C$:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/build-release/cmake_install.cmake C$:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/build-release/CTestTestfile.cmake: RERUN_CMAKE | C$:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/CMakeLists.txt C$:/msys64/ucrt64/share/cmake/Modules/CMakeCInformation.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeCommonLanguageInclude.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeGenericSystem.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeInitializeConfigs.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeLanguageInformation.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeRCInformation.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeSystemSpecificInformation.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/GNU-C.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/GNU.cmake C$:/msys64/ucrt64/share/cmake/Modules/FindOpenSSL.cmake C$:/msys64/ucrt64/share/cmake/Modules/FindPackageHandleStandardArgs.cmake C$:/msys64/ucrt64/share/cmake/Modules/FindPackageMessage.cmake C$:/msys64/ucrt64/share/cmake/Modules/Internal/CMakeCLinkerInformation.cmake C$:/msys64/ucrt64/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake C$:/msys64/ucrt64/share/cmake/Modules/Linker/GNU-C.cmake C$:/msys64/ucrt64/share/cmake/Modules/Linker/GNU.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Linker/GNU.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Linker/Windows-GNU-C.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Linker/Windows-GNU.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-GNU-C.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-GNU.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-Initialize.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-windres.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/WindowsPaths.cmake CMakeCache.txt CMakeFiles/4.3.4/CMakeCCompiler.cmake CMakeFiles/4.3.4/CMakeRCCompiler.cmake CMakeFiles/4.3.4/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build C$:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/CMakeLists.txt C$:/msys64/ucrt64/share/cmake/Modules/CMakeCCompiler.cmake.in C$:/msys64/ucrt64/share/cmake/Modules/CMakeCCompilerABI.c C$:/msys64/ucrt64/share/cmake/Modules/CMakeCInformation.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeCommonLanguageInclude.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeCompilerIdDetection.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeDetermineCCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeDetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeDetermineCompilerABI.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeDetermineCompilerId.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeDetermineCompilerSupport.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeDetermineRCCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeDetermineSystem.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeFindBinUtils.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeGenericSystem.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeInitializeConfigs.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeLanguageInformation.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeNinjaFindMake.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeParseImplicitIncludeInfo.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeParseImplicitLinkInfo.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeParseLibraryArchitecture.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeRCCompiler.cmake.in C$:/msys64/ucrt64/share/cmake/Modules/CMakeRCInformation.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeSystem.cmake.in C$:/msys64/ucrt64/share/cmake/Modules/CMakeSystemSpecificInformation.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeTestCCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeTestCompilerCommon.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeTestRCCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/ADSP-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/ARMCC-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/ARMClang-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/AppleClang-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/Borland-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/Bruce-C-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/Clang-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/Clang-DetermineCompilerInternal.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/Compaq-C-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/Cray-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/CrayClang-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/Diab-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/Embarcadero-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/Fujitsu-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/GHS-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/GNU-C-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/GNU-C.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/GNU-FindBinUtils.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/GNU.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/HP-C-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/IAR-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/Intel-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/LCC-C-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/MSVC-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/NVHPC-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/NVIDIA-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/OrangeC-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/PGI-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/PathScale-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/Renesas-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/SCO-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/SDCC-C-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/SunPro-C-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/TI-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/TIClang-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/Tasking-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/Watcom-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/XL-C-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/XLClang-C-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/zOS-C-DetermineCompiler.cmake C$:/msys64/ucrt64/share/cmake/Modules/FindOpenSSL.cmake C$:/msys64/ucrt64/share/cmake/Modules/FindPackageHandleStandardArgs.cmake C$:/msys64/ucrt64/share/cmake/Modules/FindPackageMessage.cmake C$:/msys64/ucrt64/share/cmake/Modules/Internal/CMakeCLinkerInformation.cmake C$:/msys64/ucrt64/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake C$:/msys64/ucrt64/share/cmake/Modules/Internal/CMakeDetermineLinkerId.cmake C$:/msys64/ucrt64/share/cmake/Modules/Internal/CMakeInspectCLinker.cmake C$:/msys64/ucrt64/share/cmake/Modules/Internal/FeatureTesting.cmake C$:/msys64/ucrt64/share/cmake/Modules/Linker/GNU-C.cmake C$:/msys64/ucrt64/share/cmake/Modules/Linker/GNU.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Linker/GNU.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Linker/Windows-GNU-C.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Linker/Windows-GNU.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-GNU-C.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-GNU.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-Initialize.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-windres.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/WindowsPaths.cmake CMakeCache.txt CMakeFiles/4.3.4/CMakeCCompiler.cmake CMakeFiles/4.3.4/CMakeRCCompiler.cmake CMakeFiles/4.3.4/CMakeSystem.cmake: phony
+build C$:/Users/Marcel/Desktop/Studia/Praktyki/DRBG/CMakeLists.txt C$:/msys64/ucrt64/share/cmake/Modules/CMakeCInformation.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeCommonLanguageInclude.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeGenericSystem.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeInitializeConfigs.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeLanguageInformation.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeRCInformation.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeSystemSpecificInformation.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/GNU-C.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/GNU.cmake C$:/msys64/ucrt64/share/cmake/Modules/FindOpenSSL.cmake C$:/msys64/ucrt64/share/cmake/Modules/FindPackageHandleStandardArgs.cmake C$:/msys64/ucrt64/share/cmake/Modules/FindPackageMessage.cmake C$:/msys64/ucrt64/share/cmake/Modules/Internal/CMakeCLinkerInformation.cmake C$:/msys64/ucrt64/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake C$:/msys64/ucrt64/share/cmake/Modules/Linker/GNU-C.cmake C$:/msys64/ucrt64/share/cmake/Modules/Linker/GNU.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Linker/GNU.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Linker/Windows-GNU-C.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Linker/Windows-GNU.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-GNU-C.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-GNU.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-Initialize.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-windres.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/WindowsPaths.cmake CMakeCache.txt CMakeFiles/4.3.4/CMakeCCompiler.cmake CMakeFiles/4.3.4/CMakeRCCompiler.cmake CMakeFiles/4.3.4/CMakeSystem.cmake: phony
 
 
 #############################################

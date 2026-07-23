@@ -156,6 +156,8 @@ add_executable(drbg_tests
 
     tests/hmac_drbg_update_test.c
     tests/hmac_drbg_boundary_test.c
+    tests/hmac_drbg_nist_kat.c
+    tests/hmac_drbg_nist_extended_kat.c
 
     drbgs/hash_drbg.c
     algorithms/hash_df.c
