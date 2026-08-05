@@ -18,6 +18,9 @@ bool test_hmac_drbg_nist_reseed(void);
 bool test_hmac_drbg_nist_prediction_resistance(void);
 bool test_hmac_drbg_boundaries(void);
 
+bool test_ctr_drbg_counter(void);
+bool test_ctr_drbg_update(void);
+
 typedef bool (*TestFunction)(void);
 
 typedef struct
@@ -65,6 +68,14 @@ int main(void)
         {
             "hmac_drbg_boundaries",
             test_hmac_drbg_boundaries
+        },
+        {
+            "ctr_drbg_counter",
+            test_ctr_drbg_counter
+        },
+        {
+            "ctr_drbg_update",
+            test_ctr_drbg_update
         }
     };
 

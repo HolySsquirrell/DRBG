@@ -121,6 +121,9 @@ add_executable(DRBG
     algorithms/hash_math.c
     algorithms/hashgen.c
     algorithms/hmac_drbg_update.c
+    algorithms/ctr_drbg_counter.c
+    algorithms/ctr_drbg_counter.c
+    algorithms/ctr_drbg_update.c
 
     drbgs/hash_drbg.c
     drbgs/hmac_drbg.c
@@ -164,7 +167,16 @@ add_executable(drbg_tests
     algorithms/hash_math.c
     algorithms/hashgen.c
     crypto/crypto_hash.c
+    
+    tests/ctr_drbg_counter_test.c
+    algorithms/ctr_drbg_counter.c
+    tests/ctr_drbg_counter_test.c
+    tests/ctr_drbg_update_test.c
 
+    algorithms/ctr_drbg_update.c
+
+    crypto/crypto_aes.c
+    
     drbgs/hmac_drbg.c
     algorithms/hmac_drbg_update.c
     crypto/crypto_hmac.c
